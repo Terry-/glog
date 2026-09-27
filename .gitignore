@@ -26,3 +26,7 @@ pnpm-debug.log*
 
 # build log
 .txt
+
+# scratch & temporary notes
+tmp.md
+*.tmp
