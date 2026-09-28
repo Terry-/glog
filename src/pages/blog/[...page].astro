@@ -37,7 +37,7 @@ const popularTags = Object.entries(tagCountMap)
 	</head>
 	<body class="bg-background text-foreground antialiased transition-colors duration-300">
 		<Header />
-		<main class="max-w-4xl mx-auto px-6 py-20">
+		<main class="w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-20 transition-all duration-300">
 			{page.currentPage === 1 && (
 				<section class="mb-20">
 					<h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -72,57 +72,59 @@ const popularTags = Object.entries(tagCountMap)
 					)}
 				</div>
 				
-				<div class="space-y-16">
+				<div class="space-y-4">
 					{
 						posts.map((post) => (
-							<article class="group relative flex flex-col md:flex-row gap-8 items-start">
+							<article class="group relative flex flex-col md:flex-row gap-5 md:gap-7 items-start p-5 sm:p-6 rounded-2xl border border-border/60 hover:border-foreground/25 bg-card/20 hover:bg-card/60 transition-all duration-300 ease-out">
 								{post.data.heroImage && (
-									<div class="w-full md:w-48 aspect-video rounded-2xl overflow-hidden bg-muted flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
-										<a href={`/blog/${post.id}/`}>
+									<div class="w-full md:w-52 aspect-video rounded-xl overflow-hidden bg-muted flex-shrink-0 border border-border/40">
+										<a href={`/blog/${post.id}/`} class="relative z-10 block w-full h-full">
 											<Image 
 												src={post.data.heroImage} 
 												alt={post.data.title} 
 												width={400} 
 												height={225} 
-												class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+												class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 ease-out"
 											/>
 										</a>
 									</div>
 								)}
-								<div class="flex-1 min-w-0">
-									<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-										<div class="flex items-center gap-2">
-											<time datetime={post.data.pubDate.toISOString()} class="text-sm font-mono text-muted-foreground whitespace-nowrap">
-												{post.data.pubDate.toLocaleDateString('zh-CN', {
-													year: 'numeric',
-													month: 'short',
-													day: 'numeric',
-												})}
-											</time>
-											{post.data.sticky && (
-												<span class="flex items-center gap-1 px-2 py-0.5 rounded-md bg-brand/10 text-brand text-[10px] font-bold uppercase tracking-wider">
-													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 17 1-2V9.85a1 1 0 0 0-.553-.894l-1.447-.724a1 1 0 0 0-1 0l-1.447.724A1 1 0 0 0 8 9.85V15l1 2"/><path d="m22 21-5-10-5 10"/><path d="M7 21h10"/><path d="m2 21 5-10 5 10"/><path d="M15.5 13 12 10l-3.5 3"/></svg>
-													Pinned
-												</span>
-											)}
-										</div>
+								<div class="flex-1 min-w-0 w-full">
+									<div class="flex items-center gap-2 mb-2">
+										<time datetime={post.data.pubDate.toISOString()} class="text-xs font-mono text-muted-foreground whitespace-nowrap">
+											{post.data.pubDate.toLocaleDateString('zh-CN', {
+												year: 'numeric',
+												month: 'short',
+												day: 'numeric',
+											})}
+										</time>
+										{post.data.sticky && (
+											<span class="flex items-center gap-1 px-2 py-0.5 rounded-md bg-muted text-foreground text-[10px] font-bold uppercase tracking-wider border border-border/60">
+												Pinned
+											</span>
+										)}
 									</div>
-									<h3 class="text-xl md:text-2xl font-bold group-hover:text-brand transition-colors mb-2 truncate" title={post.data.title}>
+									<h3 class="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 ease-out mb-2 truncate" title={post.data.title}>
 										<a href={`/blog/${post.id}/`} class="truncate block" title={post.data.title} aria-label={post.data.title}>
 											{post.data.title}
 										</a>
 									</h3>
-									<p class="text-lg text-muted-foreground line-clamp-2 max-w-3xl mb-4">
+									<p class="text-sm sm:text-base text-muted-foreground line-clamp-2 mb-3.5 leading-relaxed">
 										{post.data.description}
 									</p>
-									<div class="flex flex-wrap gap-2 pt-1">
+									<div class="flex flex-wrap gap-2 pt-1 relative z-10">
 										{post.data.tags.map((tag) => (
-											<span class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-muted text-muted-foreground group-hover:bg-brand/10 group-hover:text-brand transition-colors">
-												{tag}
-											</span>
+											<a 
+												href={`/tags/${tag.toLowerCase()}`}
+												class="text-[10px] font-mono font-medium px-2.5 py-0.5 rounded bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/40 transition-colors duration-300 ease-out"
+											>
+												#{tag}
+											</a>
 										))}
 									</div>
 								</div>
+								{/* Stretched click surface */}
+								<a href={`/blog/${post.id}/`} class="absolute inset-0 z-0 rounded-2xl" aria-label={post.data.title} />
 							</article>
 						))
 					}
