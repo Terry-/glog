@@ -9,36 +9,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 export async function getStaticPaths({ paginate }) {
 	const projects = [
 		{
-			title: "univerOS",
+			title: "网腾科技 (WangTeng Tech)",
+			category: "Corporate",
+			description: "中国大陆核心数字运营主体与战略底座，统筹云基础设施、吉域网 DNS Anycast 调度与企业级系统集成。 / The core mainland operating entity and strategic digital foundation, orchestrating cloud infrastructure, dynamic DNS networks, and intelligent system integration.",
+			link: "https://wangteng.tech",
+			tags: ["Corporate", "Infrastructure", "Cloud", "DNS"],
+			status: "Live",
+			gradient: "from-amber-600/20 to-yellow-500/20"
+		},
+		{
+			title: "优尼沃OS (univerOS)",
 			category: "Core Infrastructure",
-			description: "The next-generation Agentic OS kernel and autonomous engineering platform. Featuring distributed state machines, skill distillation, and zero-mock delivery pipelines for production AI agents.",
+			description: "面向下一代自主工程交付的智能体操作系统内核与自动化交付平台。 / The next-generation Agentic OS kernel and autonomous engineering platform with distributed state machines.",
 			link: "https://univeros.cn",
 			tags: ["Agentic OS", "Infrastructure", "AI Engineering"],
 			status: "Active",
 			gradient: "from-blue-600/20 to-indigo-500/20"
 		},
 		{
-			title: "WangTeng Tech",
-			category: "Corporate",
-			description: "The core mainland operating entity and strategic digital foundation, orchestrating cloud infrastructure, dynamic DNS networks, and intelligent system integration.",
-			link: "https://wangteng.tech",
-			tags: ["Corporate", "Infrastructure", "Cloud"],
-			status: "Live",
-			gradient: "from-amber-600/20 to-yellow-500/20"
-		},
-		{
-			title: "Wuxian Tech",
+			title: "无限IOT (Wuxian IoT)",
 			category: "Core Venture",
-			description: "Full-platform IoT multi-level distribution system and device cloud management, connecting upstream hardware and empowering private domain distribution.",
+			description: "全平台物联网多级分销系统与智能设备云管平台，赋能软硬件一体化私域商业。 / Full-platform IoT multi-level distribution system and device cloud management, connecting upstream hardware and empowering private domain distribution.",
 			link: "https://wuxian.xyz",
 			tags: ["IoT Platform", "Cloud Management", "Distribution"],
 			status: "Live",
 			gradient: "from-emerald-600/20 to-teal-500/20"
 		},
 		{
-			title: "Junxi Tech",
+			title: "钧曦智能 (Junxi Intelligent)",
 			category: "Creative Lab",
-			description: "Frontier technology exploration, experimental digital assets, and high-frequency innovation lab under the corporate matrix.",
+			description: "前沿人工智能技术原型探索、实验性数字化资产与高频创新实验室。 / Frontier AI exploration, experimental digital assets, and high-frequency innovation lab under the corporate matrix.",
 			link: "https://junxi.xyz",
 			tags: ["Innovation", "Frontier Tech", "Labs"],
 			status: "Active",

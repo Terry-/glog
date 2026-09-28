@@ -6,60 +6,97 @@ import { getSortedBlogPosts } from '../lib/content';
 const allPosts = await getSortedBlogPosts();
 const recentPosts = allPosts.slice(0, 3);
 
-const coreProjects = [
-	{
-		title: "univerOS",
-		subtitle: "智能体操作系统内核",
-		description: "面向下一代自主工程交付的 Agentic OS 内核，分布式状态机与技能蒸馏底座。",
-		link: "https://univeros.cn",
-		tags: ["Agentic OS", "Delivery", "Kernel"],
-		badge: "Core OS",
-		badgeColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20"
-	},
+const coreProducts = [
 	{
 		title: "网腾科技",
+		enTitle: "WangTeng Tech",
 		subtitle: "wangteng.tech",
-		description: "中国大陆核心数字运营主体，统筹吉域网云基础设施、Anycast 动态调度与数字矩阵。",
+		description: "中国大陆核心数字运营主体，统筹吉域网云基础设施、Anycast 动态调度与数字产品矩阵。",
+		enDescription: "Core mainland operating entity orchestrating cloud infrastructure, dynamic DNS networks, and digital matrices.",
 		link: "https://wangteng.tech",
 		tags: ["Corporate", "Cloud Infra", "DNS"],
-		badge: "Enterprise",
+		badge: "核心主体",
+		enBadge: "Enterprise",
 		badgeColor: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20"
 	},
 	{
-		title: "无限科技",
+		title: "优尼沃OS",
+		enTitle: "univerOS",
+		subtitle: "univeros.cn",
+		description: "面向下一代自主工程交付的智能体操作系统内核，分布式状态机与技能蒸馏底座。",
+		enDescription: "Next-generation Agentic OS kernel and autonomous engineering platform with distributed state machines.",
+		link: "https://univeros.cn",
+		tags: ["Agentic OS", "Delivery", "Kernel"],
+		badge: "系统内核",
+		enBadge: "Core OS",
+		badgeColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20"
+	},
+	{
+		title: "无限IOT",
+		enTitle: "Wuxian IoT",
 		subtitle: "wuxian.xyz",
 		description: "全平台物联网多级分销系统与智能设备云管平台，赋能软硬件一体化私域商业。",
+		enDescription: "Full-platform IoT multi-level distribution system and device cloud management platform.",
 		link: "https://wuxian.xyz",
 		tags: ["IoT Platform", "Cloud Management", "Distribution"],
-		badge: "IoT Platform",
+		badge: "物联平台",
+		enBadge: "IoT Platform",
 		badgeColor: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
 	},
 	{
-		title: "君熹科技",
+		title: "钧曦智能",
+		enTitle: "Junxi Intelligent",
 		subtitle: "junxi.xyz",
-		description: "专注于前沿科技原型验证、实验性数字化资产与高频创新的核心前哨。",
+		description: "专注于前沿人工智能原型验证、实验性数字化资产与高频创新的核心前哨。",
+		enDescription: "Frontier AI prototyping, experimental digital assets, and high-frequency innovation outpost.",
 		link: "https://junxi.xyz",
 		tags: ["Frontier Tech", "Labs", "Innovation"],
-		badge: "Innovation Lab",
+		badge: "前沿实验室",
+		enBadge: "Innovation Lab",
 		badgeColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20"
+	}
+];
+
+const socialLinks = [
+	{ 
+		name: "X (Twitter)", 
+		href: "https://x.com/geniux", 
+		icon: "M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" 
 	},
-	{
-		title: "Qiulot.io",
-		subtitle: "Web3 预测与竞技生态",
-		description: "基于 Web3 的去中心化赛事预测与体育竞技模拟市场，深度耕耘赔率引擎与数字资产。",
-		link: "https://qiulot.io",
-		tags: ["Web3", "Prediction Market", "GameFi"],
-		badge: "Web3 DApp",
-		badgeColor: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20"
+	{ 
+		name: "Facebook", 
+		href: "https://facebook.com/geniux", 
+		icon: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" 
 	},
-	{
-		title: "IceHoo Engine",
-		subtitle: "模块化游戏服务引擎",
-		description: "采用 B.E.D. 技术栈构建的 GaaS 游戏后端云中枢，提供统一身份凭据与高并发资产调度。",
-		link: "https://icehoo.com",
-		tags: ["GaaS", "Game Engine", "Backend"],
-		badge: "Game Platform",
-		badgeColor: "bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/20"
+	{ 
+		name: "Instagram", 
+		href: "https://instagram.com/geniux", 
+		icon: "M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.584-.071 4.85c-.054 1.17-.249 1.805-.415 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.015-4.85-.07c-1.17-.054-1.805-.249-2.227-.415a3.813 3.813 0 01-1.382-.896 3.813 3.813 0 01-.896-1.381c-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.584.07-4.85c.054-1.17.249-1.805.415-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.266-.057 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S1.335 3.35.57 4.14C.274 4.905.074 5.775.014 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126s1.335 1.079 2.126 1.384c.766.299 1.636.499 2.913.558 1.28.058 1.687.072 4.947.072s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384s1.079-1.335 1.384-2.126c.299-.765.499-1.636.558-2.913.058-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.885 5.885 0 00-1.384-2.126A5.885 5.885 0 0019.86.63c-.765-.299-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16.75a4.588 4.588 0 110-9.176 4.588 4.588 0 010 9.176zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" 
+	},
+	{ 
+		name: "About.me", 
+		href: "https://about.me/geniux", 
+		icon: "M3.158 9.897v4.131h.65v-.408c.23.297.577.483.961.483.768 0 1.332-.582 1.332-1.573 0-.967-.558-1.568-1.332-1.568-.372 0-.719.168-.96.49V9.897Zm10.285.322v.818h-.495v.563h.495v1.729c0 .501.26.774.769.774.297 0 .49-.087.607-.192l-.155-.496a.4.4 0 0 1-.285.112c-.186 0-.285-.155-.285-.36V11.6h.607v-.563h-.607v-.818zm-5.488.743c-.954 0-1.536.706-1.536 1.567 0 .855.582 1.574 1.536 1.574s1.537-.719 1.537-1.574c0-.86-.583-1.567-1.537-1.567m14.577 0c-.886 0-1.518.7-1.518 1.567 0 .948.663 1.574 1.567 1.574.47 0 .91-.155 1.214-.44l-.297-.427c-.217.216-.557.334-.855.334-.564 0-.898-.378-.948-.824H24v-.16c0-.942-.57-1.624-1.468-1.624m-4.576 0c-.459 0-.849.298-.979.477v-.402h-.65v2.991h.65v-2.093c.137-.192.403-.397.694-.397.354 0 .49.217.49.54v1.95h.65v-2.093c.13-.199.403-.397.694-.397.353 0 .495.217.495.54v1.95h.65v-2.161c0-.607-.315-.905-.86-.905-.453 0-.85.28-1.016.545-.1-.322-.372-.545-.818-.545m-16.55 0c-.477 0-.91.15-1.257.484l.272.452a1.2 1.2 0 0 1 .886-.384c.41 0 .7.21.7.557v.446c-.223-.254-.563-.384-.972-.384-.49 0-1.035.285-1.035.979 0 .656.551.99 1.035.99.396 0 .75-.142.972-.402v.328h.65V12.04c0-.799-.582-1.078-1.25-1.078m8.449.075v2.118c0 .607.322.948.966.948.47 0 .842-.235 1.053-.471v.396h.65v-2.991h-.65v2.1a.99.99 0 0 1-.762.39c-.372 0-.607-.149-.607-.613v-1.877zm12.67.458c.589 0 .83.434.85.787H21.69c.025-.36.285-.787.837-.787m-17.942.043c.514 0 .843.415.843.992 0 .582-.329.997-.843.997a.98.98 0 0 1-.774-.397v-1.189a.98.98 0 0 1 .774-.403m3.372 0c.558 0 .861.465.861.991 0 .533-.303.998-.86.998-.552 0-.862-.465-.862-.997 0-.527.31-.992.861-.992m-6.66 1.041c.279 0 .557.105.712.31v.458c-.155.204-.433.31-.712.31-.366 0-.644-.21-.644-.539 0-.322.278-.539.644-.539m14.269.65a.44.44 0 0 0-.434.428c0 .235.198.44.434.44a.445.445 0 0 0 .434-.44.44.44 0 0 0-.434-.428" 
+	},
+	{ 
+		name: "Linktree", 
+		href: "https://linktr.ee/geniux", 
+		icon: "m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z" 
+	},
+	{ 
+		name: "WordPress", 
+		href: "https://geniux.wordpress.com", 
+		icon: "M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.104 1.234-.104.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0" 
+	},
+	{ 
+		name: "Blogger", 
+		href: "https://blogger.geniux.net", 
+		icon: "M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.025 0H22.05C23.1 0 24 .9 24 2.025v19.95C24 23.1 23.1 24 21.976 24zM12 3.975H9c-2.775 0-5.025 2.25-5.025 5.025v6c0 2.774 2.25 5.024 5.025 5.024h6c2.774 0 5.024-2.25 5.024-5.024v-3.975c0-.6-.45-1.05-1.05-1.05H18c-.524 0-.976-.45-.976-.976 0-2.776-2.25-5.026-5.024-5.026zm3.074 12H9c-.525 0-.975-.45-.975-.975s.45-.976.975-.976h6.074c.526 0 .977.45.977.976s-.45.976-.975.976zm-2.55-7.95c.527 0 .976.45.976.975s-.45.975-.975.975h-3.6c-.525 0-.976-.45-.976-.975s.45-.975.975-.975h3.6z" 
+	},
+	{ 
+		name: "Email", 
+		href: "mailto:geniux+glog@gmail.com", 
+		icon: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2" 
 	}
 ];
 ---
@@ -67,7 +104,10 @@ const coreProjects = [
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title="Glog · 尹霈泽 | 核心导航与数字矩阵" description="尹霈泽 (Geniux) 个人思考沉淀、商业观察与核心技术矩阵导航。" />
+		<BaseHead 
+			title="尹霈泽 | 核心导航与数字矩阵 · Geniux Hub" 
+			description="尹霈泽 (Geniux) 个人主页、核心产品线导航、商业思考与技术架构实践。 / Geniux personal homepage, core product lines, business insights, and technical architecture." 
+		/>
 		<link rel="shortcut icon" href="/avatar.png" type="image/png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,11 +115,11 @@ const coreProjects = [
 	</head>
 	<body class="bg-[#fafafa] dark:bg-[#0a0a0a] text-[#1a1a1a] dark:text-[#f0f0f0] font-['Outfit',sans-serif] selection:bg-brand/10 selection:text-brand overflow-x-hidden transition-colors duration-300">
 		<!-- 1. Navigation Header -->
-		<nav class="w-full h-20 flex justify-center items-center gap-8 relative z-50 bg-white/60 dark:bg-black/60 backdrop-blur-md border-b border-border/40">
-			<HeaderLink href="/">HOME</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/projects">Project</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+		<nav class="w-full h-20 flex justify-center items-center gap-6 sm:gap-8 relative z-50 bg-white/60 dark:bg-black/60 backdrop-blur-md border-b border-border/40 font-mono text-xs sm:text-sm">
+			<HeaderLink href="/">HOME / 首页</HeaderLink>
+			<HeaderLink href="/blog">BLOG / 博客</HeaderLink>
+			<HeaderLink href="/projects">PROJECTS / 项目</HeaderLink>
+			<HeaderLink href="/about">ABOUT / 关于</HeaderLink>
 		</nav>
 		
 		<main class="min-h-[calc(100vh-80px)] w-full flex flex-col items-center pt-8 sm:pt-12 pb-24 px-6 sm:px-12 relative">
@@ -104,7 +144,7 @@ const coreProjects = [
 						<div class="flex items-center justify-center gap-2">
 							<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-muted/60 text-muted-foreground border border-border">
 								<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-								Executionism & Digital Sovereignty
+								执行主义与数字主权 / Executionism & Digital Sovereignty
 							</span>
 						</div>
 
@@ -112,42 +152,59 @@ const coreProjects = [
 							尹霈泽 <span class="text-muted-foreground/60 text-2xl sm:text-3xl font-normal">/ Geniux</span>
 						</h1>
 
-						<p class="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed text-balance">
-							架构师、创业者与执行主义者。主张“既定目标不能改变：执行、发现问题、修正方法、继续执行”。深耕智能体操作系统（Agentic OS）、数字主权领地与可量化经济闭环。
-						</p>
+						<div class="max-w-2xl space-y-2 text-balance">
+							<p class="text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
+								架构师、创业者与执行主义者。主张“既定目标不能改变：执行、发现问题、修正方法、继续执行”。深耕智能体操作系统（Agentic OS）、数字主权领地与可量化商业闭环。
+							</p>
+							<p class="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
+								Architect, entrepreneur, and relentless executionist. Dedicated to Agentic OS kernels, digital sovereignty, and high-velocity engineering delivery.
+							</p>
+						</div>
 					</div>
 
-					<!-- Social & Hub Quick Links -->
+					<!-- Social & Hub Quick Links (Restored Original Personal Icons) -->
 					<div class="flex flex-wrap justify-center items-center gap-3 pt-2">
-						<a href="https://github.com/WT-Agent" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-card border border-border text-xs font-semibold hover:border-primary hover:text-primary transition-all shadow-xs">
-							GitHub: @WT-Agent
-						</a>
-						<a href="https://github.com/Terry-" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-card border border-border text-xs font-semibold hover:border-primary hover:text-primary transition-all shadow-xs">
-							GitHub: @Terry-
-						</a>
+						{socialLinks.map((social) => (
+							<a 
+								href={social.href} 
+								target={social.href.startsWith('mailto') ? '_self' : '_blank'} 
+								rel={social.href.startsWith('mailto') ? '' : 'noopener noreferrer'} 
+								title={social.name}
+								class="p-2.5 border border-border rounded-xl hover:border-primary hover:text-primary transition-all hover:scale-105 active:scale-95 bg-card/60 dark:bg-card/40 shadow-xs"
+							>
+								<span class="sr-only">{social.name}</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class={social.href.startsWith('mailto') ? 'fill-none stroke-current' : ''}>
+									<path d={social.icon} stroke-width={social.href.startsWith('mailto') ? '2' : '0'}/>
+								</svg>
+							</a>
+						))}
+					</div>
+
+					<!-- Quick Jump Buttons -->
+					<div class="flex flex-wrap justify-center items-center gap-3 pt-1">
 						<a href="/blog" class="px-4 py-2 rounded-xl bg-primary text-primary-foreground text-xs font-semibold hover:opacity-90 transition-all shadow-xs">
-							阅读全部博客
+							全部思考 / Read Essays
 						</a>
 						<a href="/projects" class="px-4 py-2 rounded-xl bg-muted text-foreground text-xs font-semibold hover:bg-accent transition-all shadow-xs border border-border">
-							项目矩阵总览
+							项目矩阵 / All Projects
 						</a>
 					</div>
 				</div>
 
-				<!-- 3. Core Ecosystem Project Matrix (核心项目导航) -->
+				<!-- 3. Core Product Lines (核心产品线) -->
 				<section class="w-full space-y-6 pt-4">
 					<div class="flex items-center justify-between border-b border-border/60 pb-3">
 						<div>
-							<h2 class="text-xl sm:text-2xl font-bold tracking-tight">核心生态矩阵</h2>
-							<p class="text-xs text-muted-foreground mt-0.5 font-mono">CORE VENTURES & PLATFORM ECOSYSTEM</p>
+							<h2 class="text-xl sm:text-2xl font-bold tracking-tight">核心产品线</h2>
+							<p class="text-xs text-muted-foreground mt-0.5 font-mono">CORE PRODUCT LINES</p>
 						</div>
 						<a href="/projects" class="text-xs font-semibold text-primary hover:underline">
-							查看全部项目 →
+							查看全部项目 / View All →
 						</a>
 					</div>
 
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						{coreProjects.map((p) => (
+						{coreProducts.map((p) => (
 							<a 
 								href={p.link} 
 								target="_blank" 
@@ -157,11 +214,11 @@ const coreProjects = [
 								<div class="space-y-2.5">
 									<div class="flex items-center justify-between">
 										<div class="flex items-center gap-2">
-											<h3 class="font-bold text-lg text-foreground group-hover:text-primary transition-colors">
-												{p.title}
+											<h3 class="font-bold text-base sm:text-lg text-foreground group-hover:text-primary transition-colors">
+												{p.title} <span class="text-xs text-muted-foreground font-normal">/ {p.enTitle}</span>
 											</h3>
 											<span class={`text-[10px] font-mono font-semibold px-2 py-0.5 rounded-md border ${p.badgeColor}`}>
-												{p.badge}
+												{p.badge} · {p.enBadge}
 											</span>
 										</div>
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-muted-foreground/60 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
@@ -171,8 +228,11 @@ const coreProjects = [
 									<p class="text-xs font-mono text-primary/80">
 										{p.subtitle}
 									</p>
-									<p class="text-xs text-muted-foreground leading-relaxed">
+									<p class="text-xs text-foreground/80 leading-relaxed">
 										{p.description}
+									</p>
+									<p class="text-[11px] text-muted-foreground leading-relaxed font-light">
+										{p.enDescription}
 									</p>
 								</div>
 								
@@ -188,7 +248,7 @@ const coreProjects = [
 					</div>
 				</section>
 
-				<!-- 4. Recent Insights (最新博客随笔) -->
+				<!-- 4. Recent Insights (最新深度思考) -->
 				<section class="w-full space-y-6 pt-4">
 					<div class="flex items-center justify-between border-b border-border/60 pb-3">
 						<div>
@@ -196,7 +256,7 @@ const coreProjects = [
 							<p class="text-xs text-muted-foreground mt-0.5 font-mono">RECENT INSIGHTS & ESSAYS</p>
 						</div>
 						<a href="/blog" class="text-xs font-semibold text-primary hover:underline">
-							进入博客库 →
+							进入博客库 / View All →
 						</a>
 					</div>
 
@@ -232,7 +292,7 @@ const coreProjects = [
 			</div>
 
 			<!-- Footer Copy Link Floating Button -->
-			<button id="copy-link" class="fixed bottom-6 right-6 p-3.5 bg-white/90 dark:bg-black/90 backdrop-blur border border-border rounded-full shadow-lg hover:border-primary transition-all active:scale-90" title="复制主页链接">
+			<button id="copy-link" class="fixed bottom-6 right-6 p-3.5 bg-white/90 dark:bg-black/90 backdrop-blur border border-border rounded-full shadow-lg hover:border-primary transition-all active:scale-90" title="复制主页链接 / Copy Link">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
 			</button>
 		</main>
@@ -240,7 +300,7 @@ const coreProjects = [
 		<script>
 			document.getElementById('copy-link')?.addEventListener('click', () => {
 				navigator.clipboard.writeText(window.location.href);
-				alert('主页链接已复制到剪贴板');
+				alert('主页链接已复制到剪贴板 / Link copied to clipboard');
 			});
 		</script>
 	</body>
