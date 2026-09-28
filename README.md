@@ -224,6 +224,9 @@ Glog 采用多云容灾与全球加速架构，确保在任何网络环境下都
 - **环境变量缺失**: 缺乏 `.env.example` 对 `WONDERCRAFT_API_KEY`, `ELEVENLABS_API_KEY`, `TRANSISTOR_API_KEY` 等关键变量的统一定义与校验。
 - **错误重试机制**: `TransistorFMClient` 的速率限制处理过于简单，缺乏指数退避策略。
 
+### 5. 画廊数据源改造 (Gallery & Google Photos)
+- **Google Photos 接入与防盗链治理**: 现有 `src/pages/gallery.astro` 仍为 Unsplash 占位模拟（标注 NAS Connected）。规划接入 Google Photos 公开共享相册，但面临 Google 临时签名（lh3 临时 URL 约 60 分钟过期）防盗链失效问题。后续需在构建期编写 `scripts/sync-google-photos.mjs`，通过公开相册提取照片并经由 `sharp` 压缩转为 WebP 本地化存储，或部署 Cloudflare Worker 边缘动态代理输出。
+
 ---
 
 沉淀知识，持续成长。 **Glog v1.9.10 Development in Progress.**
