@@ -9,6 +9,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 export async function getStaticPaths({ paginate }) {
 	const projects = [
 		{
+			title: "univerOS",
+			category: "Core Infrastructure",
+			description: "The next-generation Agentic OS kernel and autonomous engineering platform. Featuring distributed state machines, skill distillation, and zero-mock delivery pipelines for production AI agents.",
+			link: "https://univeros.cn",
+			tags: ["Agentic OS", "Infrastructure", "AI Engineering"],
+			status: "Active",
+			gradient: "from-blue-600/20 to-indigo-500/20"
+		},
+		{
+			title: "WangTeng Tech",
+			category: "Corporate",
+			description: "The core mainland operating entity and strategic digital foundation, orchestrating cloud infrastructure, dynamic DNS networks, and intelligent system integration.",
+			link: "https://wangteng.tech",
+			tags: ["Corporate", "Infrastructure", "Cloud"],
+			status: "Live",
+			gradient: "from-amber-600/20 to-yellow-500/20"
+		},
+		{
+			title: "Wuxian Tech",
+			category: "Core Venture",
+			description: "Full-platform IoT multi-level distribution system and device cloud management, connecting upstream hardware and empowering private domain distribution.",
+			link: "https://wuxian.xyz",
+			tags: ["IoT Platform", "Cloud Management", "Distribution"],
+			status: "Live",
+			gradient: "from-emerald-600/20 to-teal-500/20"
+		},
+		{
+			title: "Junxi Tech",
+			category: "Creative Lab",
+			description: "Frontier technology exploration, experimental digital assets, and high-frequency innovation lab under the corporate matrix.",
+			link: "https://junxi.xyz",
+			tags: ["Innovation", "Frontier Tech", "Labs"],
+			status: "Active",
+			gradient: "from-purple-600/20 to-pink-500/20"
+		},
+		{
 			title: "OhBona",
 			category: "Core Venture",
 			description: "Dedicated to breaking traditional dialog interactions. Through the closed loop of 'Perception -> Path Planning -> Minimalist Confirmation', it evolves AI from a 'chatbot' into a truly sticky 'Digital Assistant'.",

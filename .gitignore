@@ -30,3 +30,5 @@ pnpm-debug.log*
 # scratch & temporary notes
 tmp.md
 *.tmp
+pnpm-workspace.yaml
+pnpm-lock.yaml
