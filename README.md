@@ -133,7 +133,7 @@ Glog 采用多云容灾与全球加速架构，确保在任何网络环境下都
 - **核心逻辑**：参见 [`cloudflare.worker.js`](./cloudflare.worker.js)。
 
 ### 2. 代码托管
-代码统一托管于 GitHub：[wt-wx/glog](https://github.com/wt-wx/glog.git)
+代码统一托管于 GitHub：[WT-Agent/glog](https://github.com/WT-Agent/glog.git)
 
 ### 3. 页面呈现
 后端部署于以下平台，实现全静态、无服务器化的页面呈现：
