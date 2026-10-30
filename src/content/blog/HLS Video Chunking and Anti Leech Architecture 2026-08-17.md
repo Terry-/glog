@@ -1,6 +1,6 @@
 ---
 title: '解密 HLS 视频切片与防盗链架构：从 FFmpeg 转码到 X 平台 Player Card 落地'
-description: '深入剖析 HLS 动态流媒体底层切片机理、AES-128 密钥鉴权与四层防盗链设计，复盘如何在 X (Twitter) 平台利用 Player Card 框架实现安全可控的视频分发。'
+description: '系统解析 HLS 动态流媒体底层切片机理、AES-128 密钥鉴权与四层防盗链设计，复盘如何在 X (Twitter) 平台利用 Player Card 框架实现安全可控的视频分发。'
 pubDate: '2026-08-17 23:15:00'
 series: '嵌入式与边缘网络实战'
 tags: ['HLS', '流媒体', 'FFmpeg', '防盗链', 'X平台', 'WebRTC']

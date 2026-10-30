@@ -43,7 +43,7 @@ graph TD
 
 #### 2. 模式 2：Agent Runtime Kernel（极客与边缘算力方案）
 - **核心逻辑**：上层编排器彻底剥离微观业务决策权，降级为 **Agent OS 内核（Runtime Kernel）**。它不关心代码怎么写，只负责底层的 Docker 容器启停、CPU/内存/NPU 资源配额限制、文件系统卷挂载、API Key 安全隔离与权限控制；
-- **大脑归位**：`Hermes Prime` 作为跑在内核上的“Cognitive Worker（自治大脑）”，享有完全的决策自治权，根据任务复杂度自行动态派生（Spawn）出临时的 `Hermes Worker` 容器；
+- **大脑归位**：`Hermes Prime` 作为跑在内核上的“Autonomous Planner（自治规划器）”，享有完全的决策自治权，根据任务复杂度自行动态派生（Spawn）出临时的 `Hermes Worker` 容器；
 - **资源回收**：Worker 任务结束，内核直接执行 `docker rm -f` 强行销毁，收回系统资源；
 - **适用场景**：RK3568 等资源极度受限的边缘硬件、需要持久化运行的多项目并发 Agent OS 平台。
 

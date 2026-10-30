@@ -1,6 +1,6 @@
 ---
 title: '大模型产品的全栈架构：从感知层到基础设施的深度解析'
-description: '深入剖析 GPT、Grok 与 Gemini 的技术架构，从用户界面、应用编排层到模型推理与算力集群，对比三大 AI 巨头不同的设计哲学。'
+description: '全面拆解 GPT、Grok 与 Gemini 的技术架构，从用户界面、应用编排层到模型推理与算力集群，对比三大 AI 巨头不同的设计哲学。'
 pubDate: '2026-01-06'
 tags: ['AI架构', 'GPT', 'Grok', 'Gemini', '系统设计']
 author: "尹霈泽"
