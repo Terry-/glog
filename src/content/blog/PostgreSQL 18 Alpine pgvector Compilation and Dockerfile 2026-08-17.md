@@ -140,6 +140,6 @@ SELECT id, embedding, embedding <-> '[3,1,2]' AS distance FROM items;
 
 ---
 
-### 结语
+### 核心总结
 
 通过多阶段构建，既能兼顾 Alpine 镜像极致轻巧、启动迅速与攻击面小的原生优势，又能完美融入现代 AI 知识库所需的向量计算能力，是容器化基础设施演进的标准实践。
