@@ -34,3 +34,17 @@ tmp.md
 日本社会的等级、欲望与腐败.md
 pnpm-workspace.yaml
 pnpm-lock.yaml
+# Python cache & environments
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
