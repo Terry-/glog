@@ -234,3 +234,11 @@
 .glass-card {
   @apply bg-card/70 backdrop-blur-md border border-border/60 shadow-xs hover:border-border transition-all duration-200;
 }
+
+/* Auto bilingual display based on browser language */
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+html[data-lang="en"] .lang-zh {
+  display: none !important;
+}
