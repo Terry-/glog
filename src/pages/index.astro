@@ -6,63 +6,6 @@ import { getSortedBlogPosts } from '../lib/content';
 const allPosts = await getSortedBlogPosts();
 const recentPosts = allPosts.slice(0, 3);
 
-const coreProducts = [
-	{
-		title: "网腾科技",
-		enTitle: "WangTeng Tech",
-		subtitle: "wangteng.tech",
-		description: "中国大陆核心数字运营主体，统筹吉域网云基础设施、Anycast 动态调度与数字产品矩阵。",
-		enDescription: "Core mainland operating entity orchestrating cloud infrastructure, dynamic DNS networks, and digital matrices.",
-		link: "https://wangteng.tech",
-		tags: ["Corporate", "Cloud Infra", "DNS"]
-	},
-	{
-		title: "优尼沃OS",
-		enTitle: "univerOS",
-		subtitle: "univeros.cn",
-		description: "面向下一代自主工程交付的智能体操作系统内核，分布式状态机与技能蒸馏底座。",
-		enDescription: "Next-generation Agentic OS kernel and autonomous engineering platform with distributed state machines.",
-		link: "https://univeros.cn",
-		tags: ["Agentic OS", "Delivery", "Kernel"]
-	},
-	{
-		title: "无限IOT",
-		enTitle: "Wuxian IoT",
-		subtitle: "wuxian.xyz",
-		description: "全平台物联网多级分销系统与智能设备云管平台，赋能软硬件一体化私域商业。",
-		enDescription: "Full-platform IoT multi-level distribution system and device cloud management platform.",
-		link: "https://wuxian.xyz",
-		tags: ["IoT Platform", "Cloud Management", "Distribution"]
-	},
-	{
-		title: "钧曦智能",
-		enTitle: "Junxi Intelligent",
-		subtitle: "junxi.xyz",
-		description: "专注于前沿人工智能原型验证、实验性数字化资产与高频创新的核心前哨。",
-		enDescription: "Frontier AI prototyping, experimental digital assets, and high-frequency innovation outpost.",
-		link: "https://junxi.xyz",
-		tags: ["Frontier Tech", "Labs", "Innovation"]
-	},
-	{
-		title: "网腾董秘",
-		enTitle: "WangTeng DongMi",
-		subtitle: "univerDM · dm.wangteng.tech",
-		description: "董事长智能决策参谋系统，AI 实时扫描企业经营数据，自动发现偏差，预警风险与行业对标。",
-		enDescription: "AI-driven board secretary and executive decision copilot, continuously scanning business metrics and mitigating risks.",
-		link: "https://wangteng.tech",
-		tags: ["AI Copilot", "Decision Support", "Enterprise"]
-	},
-	{
-		title: "网腾衍界",
-		enTitle: "WangTeng Yanjie",
-		subtitle: "AIGC Vision · vision.wangteng.tech",
-		description: "企业级 AI 视频生成全链路 Pipeline 平台，首创三层场景记忆与专业短剧/电商一致性视觉生成。",
-		enDescription: "Enterprise AIGC video generation pipeline platform featuring multi-stage automated orchestration and character consistency.",
-		link: "https://wangteng.tech",
-		tags: ["AIGC Vision", "Video Pipeline", "Generative AI"]
-	}
-];
-
 const socialLinks = [
 	{ 
 		name: "X (Twitter)", 
@@ -112,7 +55,7 @@ const socialLinks = [
 	<head>
 		<BaseHead 
 			title="闲话 & AI | geniux.net" 
-			description="Geniux (字·霂之，号·霈泽) 个人主页、最新思考与核心产品实践。" 
+			description="Geniux (字·霂之，号·霈泽) 个人主页与最新思考 / Personal homepage and latest essays." 
 		/>
 		<link rel="shortcut icon" href="/avatar.png" type="image/png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +65,7 @@ const socialLinks = [
 	<body class="bg-background text-foreground antialiased font-sans selection:bg-brand/10 selection:text-brand overflow-x-hidden transition-colors duration-300">
 		<Header />
 		
-		<main class="min-h-[calc(100vh-80px)] w-full flex flex-col items-center pt-8 sm:pt-12 pb-24 px-6 sm:px-12 relative">
+		<main class="w-full flex flex-col items-center pt-8 sm:pt-12 pb-16 px-6 sm:px-12 relative">
 			<div class="max-w-4xl w-full flex flex-col items-center gap-14 relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
 				
 				<!-- 2. Hero Profile Section -->
@@ -137,23 +80,24 @@ const socialLinks = [
 						<div class="flex items-center justify-center gap-2">
 							<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-muted/50 text-muted-foreground border border-border/60">
 								<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-								Executionism & Engineering Delivery
+								<span class="lang-zh">执行主义与工程交付</span>
+								<span class="lang-en">Executionism & Engineering Delivery</span>
 							</span>
 						</div>
 
 						<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
 							<span class="text-primary">Geniux</span>
-							<span class="text-muted-foreground/30 font-light">·</span>
-							<span>字 · 霂之</span>
-							<span class="text-muted-foreground/30 font-light">·</span>
-							<span>号 · 霈泽</span>
+							<span class="lang-zh text-muted-foreground/30 font-light">·</span>
+							<span class="lang-zh">字 · 霂之</span>
+							<span class="lang-zh text-muted-foreground/30 font-light">·</span>
+							<span class="lang-zh">号 · 霈泽</span>
 						</h1>
 
-						<div class="max-w-2xl space-y-2 text-balance pt-2">
-							<p class="text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
+						<div class="max-w-2xl text-balance pt-2">
+							<p class="lang-zh text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
 								架构师、创业者与执行主义者。主张“既定目标不能改变：执行、发现问题、修正方法、继续执行”。专注于智能体操作系统（Agentic OS）、云基础设施与自动化工程交付。
 							</p>
-							<p class="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
+							<p class="lang-en text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
 								Architect, entrepreneur, and executionist. Dedicated to Agentic OS kernels, cloud infrastructure, and autonomous engineering delivery.
 							</p>
 						</div>
@@ -162,10 +106,12 @@ const socialLinks = [
 					<!-- Quick Jump Buttons in Hero -->
 					<div class="flex flex-wrap justify-center items-center gap-3 pt-1">
 						<a href="/blog" class="px-5 py-2.5 rounded-xl bg-primary text-primary-foreground text-xs font-semibold hover:opacity-90 active:scale-[0.98] transition-all duration-300 ease-out shadow-xs">
-							进入博客 / Read Essays
+							<span class="lang-zh">进入博客</span>
+							<span class="lang-en">Read Essays</span>
 						</a>
 						<a href="/projects" class="px-5 py-2.5 rounded-xl bg-muted/80 text-foreground text-xs font-semibold hover:bg-muted border border-border/70 active:scale-[0.98] transition-all duration-300 ease-out shadow-xs">
-							项目矩阵 / All Projects
+							<span class="lang-zh">项目矩阵</span>
+							<span class="lang-en">All Projects</span>
 						</a>
 					</div>
 				</div>
@@ -174,11 +120,14 @@ const socialLinks = [
 				<section class="w-full space-y-5 pt-4">
 					<div class="flex items-center justify-between border-b border-border/60 pb-3">
 						<div>
-							<h2 class="text-xl sm:text-2xl font-bold tracking-tight">最新思考</h2>
-							<p class="text-xs text-muted-foreground mt-0.5 font-mono">RECENT ESSAYS</p>
+							<h2 class="text-xl sm:text-2xl font-bold tracking-tight">
+								<span class="lang-zh">最新思考</span>
+								<span class="lang-en">Recent Essays</span>
+							</h2>
 						</div>
 						<a href="/blog" class="text-xs font-semibold text-primary hover:underline">
-							更多内容 →
+							<span class="lang-zh">更多思考 →</span>
+							<span class="lang-en">Read More →</span>
 						</a>
 					</div>
 
@@ -211,55 +160,6 @@ const socialLinks = [
 					</div>
 				</section>
 
-				<!-- 4. Core Products (核心产品) -->
-				<section class="w-full space-y-5 pt-4">
-					<div class="flex items-center justify-between border-b border-border/60 pb-3">
-						<div>
-							<h2 class="text-xl sm:text-2xl font-bold tracking-tight">核心产品</h2>
-							<p class="text-xs text-muted-foreground mt-0.5 font-mono">CORE PRODUCTS</p>
-						</div>
-						<a href="/projects" class="text-xs font-semibold text-primary hover:underline">
-							全部项目 →
-						</a>
-					</div>
-
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						{coreProducts.map((p) => (
-							<a 
-								href={p.link} 
-								target="_blank" 
-								rel="noopener noreferrer" 
-								class="group p-5 rounded-2xl bg-card/20 hover:bg-card/60 border border-border/60 hover:border-foreground/25 transition-all duration-300 ease-out flex flex-col justify-between"
-							>
-								<div class="space-y-2.5">
-									<div class="flex items-center justify-between">
-										<h3 class="font-bold text-base sm:text-lg text-foreground group-hover:text-primary transition-colors duration-300 ease-out">
-											{p.title} <span class="text-xs text-muted-foreground font-normal font-mono">/ {p.enTitle}</span>
-										</h3>
-									</div>
-									<p class="text-xs font-mono text-muted-foreground">
-										{p.subtitle}
-									</p>
-									<p class="text-xs text-foreground/80 leading-relaxed font-normal">
-										{p.description}
-									</p>
-									<p class="text-[11px] text-muted-foreground leading-relaxed font-light">
-										{p.enDescription}
-									</p>
-								</div>
-								
-								<div class="flex flex-wrap gap-1.5 pt-4 mt-auto">
-									{p.tags.map((t) => (
-										<span class="px-2 py-0.5 text-[10px] font-mono bg-muted/40 rounded text-muted-foreground border border-border/30">
-											{t}
-										</span>
-									))}
-								</div>
-							</a>
-						))}
-					</div>
-				</section>
-
 			</div>
 
 			<!-- Floating Control Buttons (Outer Edge) -->
@@ -267,8 +167,12 @@ const socialLinks = [
 				<button 
 					id="copy-link" 
 					class="w-10 h-10 flex items-center justify-center bg-background/80 hover:bg-background backdrop-blur-xl border border-border/80 hover:border-foreground/30 text-muted-foreground hover:text-foreground rounded-full shadow-sm transition-all duration-300 ease-out active:scale-[0.96]" 
-					title="复制主页链接 / Copy Link" 
+					title="复制主页链接"
 					aria-label="复制主页链接"
+					data-title-zh="复制主页链接"
+					data-title-en="Copy Link"
+					data-aria-zh="复制主页链接"
+					data-aria-en="Copy Link"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
 				</button>
@@ -277,6 +181,10 @@ const socialLinks = [
 					class="w-10 h-10 flex items-center justify-center bg-background/80 hover:bg-background backdrop-blur-xl border border-border/80 hover:border-foreground/30 text-muted-foreground hover:text-foreground rounded-full shadow-sm transition-all duration-300 ease-out transform translate-y-20 opacity-0 pointer-events-none focus-visible:outline-2 focus-visible:outline-ring active:scale-[0.96]" 
 					title="Back to Top" 
 					aria-label="Back to Top"
+					data-title-zh="回到顶部"
+					data-title-en="Back to Top"
+					data-aria-zh="回到顶部"
+					data-aria-en="Back to Top"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
 				</button>
@@ -285,7 +193,8 @@ const socialLinks = [
 			<!-- Toast Notification -->
 			<div id="copy-toast" class="fixed bottom-24 right-6 md:right-8 px-4 py-2.5 bg-foreground text-background text-xs font-semibold rounded-2xl shadow-2xl opacity-0 pointer-events-none transition-all duration-300 translate-y-2 z-50 flex items-center gap-2 border border-border/20">
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-emerald-500"><polyline points="20 6 9 17 4 12"/></svg>
-				<span>主页链接已复制到剪贴板</span>
+				<span class="lang-zh">主页链接已复制</span>
+				<span class="lang-en">Link Copied</span>
 			</div>
 		</main>
 

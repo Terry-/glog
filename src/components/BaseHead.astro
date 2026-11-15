@@ -58,3 +58,37 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
 <ClientRouter />
+
+<script is:inline>
+	(() => {
+		const detectLang = () => {
+			const navLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+			return navLang.startsWith('zh') ? 'zh' : 'en';
+		};
+
+		const applyLang = () => {
+			const lang = detectLang();
+			document.documentElement.dataset.lang = lang;
+			document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+		};
+
+		const applyLangAttrs = () => {
+			const lang = document.documentElement.dataset.lang || detectLang();
+			document.querySelectorAll('[data-title-zh][data-title-en]').forEach((el) => {
+				const val = el.getAttribute(`data-title-${lang}`);
+				if (val) el.setAttribute('title', val);
+			});
+			document.querySelectorAll('[data-aria-zh][data-aria-en]').forEach((el) => {
+				const val = el.getAttribute(`data-aria-${lang}`);
+				if (val) el.setAttribute('aria-label', val);
+			});
+		};
+
+		applyLang();
+		document.addEventListener('astro:after-swap', applyLang);
+		document.addEventListener('astro:page-load', () => {
+			applyLang();
+			applyLangAttrs();
+		});
+	})();
+</script>
