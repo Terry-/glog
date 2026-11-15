@@ -10,12 +10,73 @@ import { SITE_TITLE } from '../consts';
 interface Props {
 	title: string;
 	description: string;
-	image?: ImageMetadata;
+	image?: ImageMetadata | string;
+	article?: {
+		pubDate?: Date;
+		updatedDate?: Date;
+		author?: string;
+	};
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteURL = Astro.site ?? new URL('https://glog.geniux.net');
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const { title, description, image = FallbackImage, article } = Astro.props;
+const imagePath = typeof image === 'string' ? image : (image?.src || FallbackImage.src);
+const imageURL = new URL(imagePath, siteURL);
+
+// Base Website & Identity Structured Data
+const jsonLdGraph: any[] = [
+	{
+		"@type": "WebSite",
+		"@id": new URL('#website', siteURL).toString(),
+		"url": siteURL.toString(),
+		"name": "闲话 & AI | geniux.net",
+		"alternateName": ["geniux.net", "Geniux", "Geniux Blog", "尹鸿文个人主页"],
+		"description": "尹鸿文 (Geniux · 字霂之 · 号霈泽) 个人主页与最新文章",
+		"inLanguage": ["zh-CN", "en"]
+	},
+	{
+		"@type": "Person",
+		"@id": new URL('#person', siteURL).toString(),
+		"name": "尹鸿文",
+		"alternateName": ["Geniux", "霂之", "霈泽", "尹博睿"],
+		"url": siteURL.toString(),
+		"sameAs": [
+			"https://x.com/geniux",
+			"https://github.com/WT-Agent",
+			"https://blogger.geniux.net",
+			"https://linktr.ee/geniux"
+		],
+		"jobTitle": "Architect & Founder"
+	}
+];
+
+if (article) {
+	jsonLdGraph.push({
+		"@type": "BlogPosting",
+		"@id": canonicalURL.toString(),
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": canonicalURL.toString()
+		},
+		"headline": title,
+		"description": description,
+		"image": imageURL.toString(),
+		"datePublished": article.pubDate ? new Date(article.pubDate).toISOString() : undefined,
+		"dateModified": (article.updatedDate || article.pubDate) ? new Date(article.updatedDate || article.pubDate).toISOString() : undefined,
+		"author": {
+			"@type": "Person",
+			"name": article.author || "尹鸿文",
+			"url": siteURL.toString()
+		},
+		"publisher": {
+			"@type": "Person",
+			"name": "尹鸿文",
+			"url": siteURL.toString()
+		}
+	});
+}
 ---
 
 <!-- Global Metadata -->
@@ -27,9 +88,14 @@ const { title, description, image = FallbackImage } = Astro.props;
 	rel="alternate"
 	type="application/rss+xml"
 	title={SITE_TITLE}
-	href={new URL('rss.xml', Astro.site)}
+	href={new URL('rss.xml', siteURL)}
 />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Google Search Console Verification (Optional environment injection) -->
+{import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION && (
+	<meta name="google-site-verification" content={import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION} />
+)}
 
 <!-- Font preloads -->
 <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
@@ -44,18 +110,24 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={imageURL} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta property="twitter:image" content={imageURL} />
+
+<!-- Structured Data (JSON-LD) for Search Engines & Knowledge Graph -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify({
+	"@context": "https://schema.org",
+	"@graph": jsonLdGraph
+})} />
 
 <ClientRouter />
 

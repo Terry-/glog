@@ -27,7 +27,12 @@ const id = post ? post.id : 'page';
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead 
+			title={title} 
+			description={description} 
+			image={heroImage} 
+			article={{ pubDate, updatedDate, author }} 
+		/>
 	</head>
 
 	<body class="bg-background text-foreground antialiased transition-colors duration-300">
