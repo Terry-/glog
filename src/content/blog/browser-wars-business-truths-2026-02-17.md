@@ -3,7 +3,7 @@ title: "浏览器战争与帝国兴衰：从“咖啡命名”到“买命式并
 description: "深入探讨浏览器门后的权力博弈、盈利暗线以及那些改变世界的营销“碰瓷”。"
 pubDate: "2026-02-17"
 tags: ["浏览器", "技术历史", "商业策略", "JavaScript"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 series: "数字权力与策略"
 heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000"
 ---

@@ -4,7 +4,7 @@ description: '针对 OpenWrt/ImmortalWrt 路由器中因几百 KB 差额导致 o
 pubDate: '2026-08-17 19:00:00'
 series: '嵌入式与边缘网络实战'
 tags: ['OpenWrt', 'ImmortalWrt', 'Overlay扩容', 'OpenClash', 'Linux运维', '路由器']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在嵌入式路由器（如 OpenWrt / ImmortalWrt）的日常维护中，由于多数原厂闪存分区划分较为保守，`/overlay` 可写空间往往被限制在 30MB~60MB 的极限区间。

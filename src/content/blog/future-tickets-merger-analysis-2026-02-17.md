@@ -3,7 +3,7 @@ title: "科技巨头并购战略复盘：从“价值黑洞”到“未来门票
 description: "作为战略顾问的深度复盘，探讨并购中的工程文化需求、“中立盟主”策略与开发者生态统战。"
 pubDate: "2026-02-17"
 tags: ["并购战略", "商业逻辑", "微软", "AOL", "纳德拉"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 series: "数字权力与策略"
 heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1000"
 ---

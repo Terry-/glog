@@ -4,7 +4,7 @@ description: '系统梳理 Supervisor-Worker、Agent Runtime Kernel 与 Pure Age
 pubDate: '2026-08-18 03:30:00'
 series: '科技演进与算力权力格局'
 tags: ['Multi-Agent', 'AgenticOS', 'ZeroClaw', 'NousHermes', '系统架构', '容器技术']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在多智能体系统（Multi-Agent Systems）的工程实践中，关于“谁来当大脑、谁来管资源、系统如何自我进化”的讨论正在经历快速的迭代。

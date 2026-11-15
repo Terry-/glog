@@ -3,7 +3,7 @@ title: "Antigravity 2.0：构建异构模型‘互搏’的终极研发梦之队
 description: "从‘单兵作战’到‘五军联动’：探讨如何利用 Gemini 3、Claude 4.5、Haiku 与 Llama 构建一个具备交叉评审与 SRE 互搏能力的 IDE 协同体系。"
 pubDate: "2026-02-14"
 tags: ["AI Agent", "Multi-Agent", "Antigravity", "Claude 4.5", "Gemini 3 Pro", "SRE"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 # Antigravity 2.0：从 AI 助手到“异构专家组”的工程范式革命
