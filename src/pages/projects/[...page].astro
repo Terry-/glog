@@ -9,15 +9,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 export async function getStaticPaths({ paginate }) {
 	const projects = [
 		{
-			title: "网腾科技 (WangTeng Tech)",
-			category: "Corporate",
-			description: "中国大陆核心数字运营主体与战略底座，统筹云基础设施、吉域网 DNS Anycast 调度与企业级系统集成。 / The core mainland operating entity and strategic digital foundation, orchestrating cloud infrastructure, dynamic DNS networks, and intelligent system integration.",
-			link: "https://wangteng.tech",
-			tags: ["Corporate", "Infrastructure", "Cloud", "DNS"],
-			status: "Live",
-			gradient: "from-amber-600/20 to-yellow-500/20"
-		},
-		{
 			title: "优尼沃OS (univerOS)",
 			category: "Core Infrastructure",
 			description: "面向下一代自主工程交付的智能体操作系统内核与自动化交付平台。 / The next-generation Agentic OS kernel and autonomous engineering platform with distributed state machines.",
@@ -27,31 +18,31 @@ export async function getStaticPaths({ paginate }) {
 			gradient: "from-blue-600/20 to-indigo-500/20"
 		},
 		{
-			title: "无限IOT (Wuxian IoT)",
-			category: "Core Venture",
-			description: "全平台物联网多级分销系统与智能设备云管平台，赋能软硬件一体化私域商业。 / Full-platform IoT multi-level distribution system and device cloud management, connecting upstream hardware and empowering private domain distribution.",
-			link: "https://wuxian.xyz",
-			tags: ["IoT Platform", "Cloud Management", "Distribution"],
-			status: "Live",
-			gradient: "from-emerald-600/20 to-teal-500/20"
+			title: "优尼沃董秘 (univerDM)",
+			category: "Executive AI",
+			description: "董事长智能决策参谋系统，AI 实时扫描企业经营数据，自动发现偏差，预警风险与行业对标。 / AI-driven executive decision copilot and board secretary, continuously scanning business metrics, detecting operational variances, and mitigating strategic risks.",
+			link: "https://wangteng.tech",
+			tags: ["Executive AI", "Decision Copilot", "Enterprise"],
+			status: "Active",
+			gradient: "from-blue-600/20 to-teal-500/20"
 		},
 		{
-			title: "钧曦智能 (Junxi Intelligent)",
-			category: "Creative Lab",
-			description: "前沿人工智能技术原型探索、实验性数字化资产与高频创新实验室。 / Frontier AI exploration, experimental digital assets, and high-frequency innovation lab under the corporate matrix.",
-			link: "https://junxi.xyz",
-			tags: ["Innovation", "Frontier Tech", "Labs"],
+			title: "优尼沃衍界 (univerVision)",
+			category: "AIGC Vision",
+			description: "企业级 AI 视频生成全链路 Pipeline 平台，首创三层场景记忆与专业短剧/电商一致性视觉生成。 / Enterprise AIGC video generation pipeline platform featuring multi-stage orchestration, scene consistency, and commercial video synthesis.",
+			link: "https://wangteng.tech",
+			tags: ["AIGC Vision", "Video Pipeline", "Generative AI"],
 			status: "Active",
 			gradient: "from-purple-600/20 to-pink-500/20"
 		},
 		{
-			title: "bibleOS.ai",
-			category: "Civilizational OS",
-			description: "分布式文明进化协议与高阶智能体生存底座。超越单一数字备份或中心化超脑，BibleOS 作为文明基因库，定义最低行动量知识传承。 / A distributed civilizational evolution protocol and persistent intelligence substrate.",
-			link: "https://bibleos.ai",
-			tags: ["Civilizational OS", "Evolution Protocol", "AI Kernel"],
-			status: "Active",
-			gradient: "from-purple-600/20 to-indigo-500/20"
+			title: "无限IOT (Wuxian IoT)",
+			category: "Core Venture",
+			description: "全平台物联网多级分销系统与智能设备云管平台，融合广告平台流量变现、多级分销结算与软硬件一体化设备管理体系，赋能私域商业与企业级物联生态。 / Full-platform IoT multi-level distribution system and device cloud management, empowering hardware-software private domain distribution.",
+			link: "https://wuxian.xyz",
+			tags: ["IoT Platform", "Cloud Management", "Distribution", "AdTech"],
+			status: "Live",
+			gradient: "from-emerald-600/20 to-teal-500/20"
 		},
 		{
 			title: "agentFriendly.network",
@@ -64,12 +55,21 @@ export async function getStaticPaths({ paginate }) {
 		},
 		{
 			title: "agentUniver.com",
-			category: "Agentic Ecosystem",
-			description: "全球智能体集群编排与协作宇宙，提供大规模自主工程智能体纳管、调度与服务聚合。 / Global agent orchestration and collaboration universe for autonomous engineering AI agents.",
+			category: "Agent Marketplace",
+			description: "全球首个自主智能体分发与交易市场（Global Agent Marketplace），提供跨平台 Agent 纳管、垂直技能包上架分发与智能体经济调度。 / The global decentralized autonomous AI Agent marketplace, enabling multi-agent discovery, distribution, specialized skill packaging, and agentic economic coordination.",
 			link: "https://agentuniver.com",
-			tags: ["Agentic OS", "Orchestration", "Multi-Agent"],
+			tags: ["Agent Marketplace", "AI Economy", "Distribution", "Ecosystem"],
 			status: "Active",
 			gradient: "from-blue-600/20 to-cyan-500/20"
+		},
+		{
+			title: "bibleOS.ai",
+			category: "Civilizational OS",
+			description: "分布式文明进化协议与高阶智能体生存底座。超越单一数字备份或中心化超脑，BibleOS 作为文明基因库，定义最低行动量知识传承。 / A distributed civilizational evolution protocol and persistent intelligence substrate.",
+			link: "https://bibleos.ai",
+			tags: ["Civilizational OS", "Evolution Protocol", "AI Kernel"],
+			status: "Active",
+			gradient: "from-purple-600/20 to-indigo-500/20"
 		},
 		{
 			title: "npcMatrix.com",
@@ -83,36 +83,36 @@ export async function getStaticPaths({ paginate }) {
 		{
 			title: "LLMmatrix.com",
 			category: "Inference Mesh",
-			description: "高并发大模型推理网格与异构路由调度中枢，提供统一的模型网关、成本感知路由与高可用推断基座。 / High-concurrency LLM inference mesh and heterogeneous model router for resilient model dispatching.",
+			description: "高并发大模型推理网格与异构路由调度中枢。项目现已从核心矩阵完成独立剥离，计划捐赠至开源基金会或公益生态长期运作。 / High-concurrency LLM inference mesh and router. Successfully divested from core operations and scheduled for public donation to open-source governance.",
 			link: "https://llmmatrix.com",
-			tags: ["Inference Mesh", "LLM Gateway", "Model Router"],
-			status: "Active",
+			tags: ["Inference Mesh", "LLM Gateway", "Model Router", "Donation Pending"],
+			status: "Divested",
 			gradient: "from-rose-600/20 to-pink-500/20"
 		},
 		{
-			title: "OhBona",
-			category: "Core Venture",
-			description: "Dedicated to breaking traditional dialog interactions. Through the closed loop of 'Perception -> Path Planning -> Minimalist Confirmation', it evolves AI from a 'chatbot' into a truly sticky 'Digital Assistant'.",
-			tags: ["AI Agent", "Task Execution", "UX Design"],
-			status: "Active",
-			image: "/projects_hero_abstract.png",
-			gradient: "from-purple-500/20 to-blue-500/20"
-		},
-        {
-			title: "Qiulot.io",
-			category: "Core Venture",
-			description: "A decentralized sports prediction market DApp based on Web3. Benchmarking against Polymarket and Kalshi, it deeply cultivates sports event incentive models and odds engines to build a decentralized prediction ecosystem.",
-			link: "https://qiulot.io",
-			tags: ["Web3", "Prediction Market", "DApp"],
+			title: "Qiulot.com",
+			category: "Web3 & GameFi",
+			description: "全球体育赛事竞技预测平台与商业品牌门户，深度耕耘赔率引擎、赛事激励模型与数字资产。 / Global sports prediction market platform and commercial brand portal, cultivating odds engines, event incentives, and digital entertainment.",
+			link: "https://qiulot.com",
+			tags: ["Prediction Market", "Sports Tech", "Brand Portal", "Commercial"],
 			status: "Active",
 			gradient: "from-blue-600/20 to-cyan-500/20"
 		},
 		{
-			title: "Qiulot Game",
-			category: "Core Venture",
-			description: "A Web3 sports management simulation game built on Godot 4.6. Integrating football manager mechanics, NFT economy, and real-time match data, it aims to deliver a World Cup edition football manager experience in 2026.",
+			title: "Qiulot.org",
+			category: "DAO & Governance",
+			description: "Qiulot 预测协议非盈利生态与 DAO 治理社区门户，承载社区仲裁规则、协议公约与去中心化提案演进。 / Non-profit foundation and DAO governance portal for the Qiulot protocol, managing community arbitration, protocol rules, and decentralized proposals.",
+			link: "https://qiulot.org",
+			tags: ["DAO", "Governance", "Non-profit", "Decentralized"],
+			status: "Active",
+			gradient: "from-indigo-600/20 to-purple-500/20"
+		},
+		{
+			title: "Qiulot.io",
+			category: "Web3 DApp",
+			description: "去中心化体育赛事预测市场 DApp 与链上交易应用端，对接 AMM 流动池与去中心化预言机，支持即时预测与链上资产交割。 / The decentralized Web3 prediction market DApp entry point, connecting AMM liquidity pools and decentralized oracles for trustless execution.",
 			link: "https://qiulot.io",
-			tags: ["GameFi", "Godot 4.6", "NFT Economy"],
+			tags: ["Web3 DApp", "Prediction Market", "AMM", "Oracle"],
 			status: "Active",
 			gradient: "from-cyan-600/20 to-blue-500/20"
 		},
@@ -142,70 +142,71 @@ export async function getStaticPaths({ paginate }) {
 			gradient: "from-emerald-600/20 to-teal-500/20"
 		},
 		{
-			title: "Shadow Frontier",
-			category: "Creative Lab",
-			description: "A dark-themed open-world RPG exploration masterpiece built on the Godot engine. Digging deep into Chinese ghost culture, it creates an immersive narrative and puzzle-solving experience for global players.",
-			tags: ["GameDev", "RPG", "Godot"],
+			title: "GSirInvestment",
+			category: "Personal Project",
+			description: "个人资产智能与交易决策复盘系统。立足“底账摸底先行、资产状态穿透、情绪博弈辅助、交易纪律约束”，坚持本地优先（Local-First）与私有化存储。 / Personal AI Asset Agent and trading decision flight recorder, emphasizing balance-sheet first, discipline enforcement, and local-first privacy.",
+			tags: ["Personal Project", "Asset Intelligence", "Decision Recorder", "Local-First"],
 			status: "Active",
-			gradient: "from-amber-700/20 to-stone-600/20"
+			gradient: "from-emerald-500/20 to-cyan-500/20"
 		},
 		{
-			title: "Pure Bond",
-			category: "Creative Lab",
-			description: "A narrative experiment for female-oriented nurturing. Exploring AI-driven emotional interaction and digital companionship, it aims to create an emotional interaction medium with deep resonance.",
-			tags: ["Creative", "AI Interaction", "GameDev"],
+			title: "AI-Livestreaming",
+			category: "Personal Project",
+			description: "7x24 小时全自动无人值守循环直播基础设施与虚拟导播台。采用伴侣原生合规物理注入与双音轨解耦架构，结合动态画面熵增防风控体系。 / AI 24/7 automated companion-native virtual livestreaming infrastructure and web studio, featuring dual-audio track decoupling and dynamic frame entropy.",
+			tags: ["Personal Project", "AIGC", "Livestreaming", "Virtual Studio", "Automation"],
 			status: "Active",
-			gradient: "from-orange-400/20 to-yellow-300/20"
+			gradient: "from-red-500/20 to-pink-500/20"
 		},
 		{
-			title: "YouTube Transcript Automation Factory",
-			category: "Creative Lab",
-			description: "An automated pipeline for fetching YouTube transcripts, syncing with Google Sheets, and processing audio with Faster-Whisper for high-accuracy local transcription and archival.",
-			link: "https://github.com/wt-wx/youtube-transcript-tool",
-			tags: ["Python", "Automation", "Whisper AI", "YouTube API"],
+			title: "AliGenie",
+			category: "Personal Project",
+			description: "天猫精灵硬件大模型语音中继桥接系统。通过自定义语音技能与 Webhook 调度，将传统智能音箱打造成具备长上下文理解能力的私有 AI 语音助理。 / Custom voice skill and LLM webhook bridge for AliGenie / Tmall Genie hardware, turning smart speakers into intelligent private AI assistants.",
+			tags: ["Personal Project", "Smart Home", "AliGenie", "Voice AI", "LLM Bridge"],
 			status: "Active",
-			gradient: "from-red-600/20 to-orange-500/20"
+			gradient: "from-amber-500/20 to-orange-500/20"
 		},
 		{
 			title: "Sublime Markdown Preview",
-			category: "Developer Tools",
+			category: "Personal Project",
 			description: "专为 Sublime Text 打造的轻量高效 Markdown 实时预览与排版渲染工作流，支持 GitHub 风格渲染、数学公式与本地即时同步。 / A lightweight and extensible Markdown previewing workflow for Sublime Text, supporting GitHub-flavored Markdown, LaTeX syntax, and seamless local browser rendering.",
-			tags: ["Sublime Text", "Markdown", "Developer Tool", "Workflow"],
+			tags: ["Personal Project", "Sublime Text", "Markdown", "Developer Tool", "Workflow"],
 			status: "Active",
 			gradient: "from-orange-600/20 to-amber-500/20"
 		},
 		{
-			title: "Wonten Infinite Official",
-			category: "Corporate",
-			description: "The official website of Wonten Infinite—a full-platform IoT multi-level distribution system benchmarked against Youzan and Weimob—showcasing the corporate vision, core technology, and business matrix.",
-			link: "https://wuxian.xyz",
-			tags: ["Marketing", "Corporate Identity"],
-			status: "Live",
-			gradient: "from-slate-500/20 to-gray-500/20"
-		},
-		{
-			title: "Infinite Tech PMS (Ad Edition)",
-			category: "Core Venture",
-			description: "An advertising platform management system based on multiple revenue models and multi-level distribution systems. Provides complete functions for user management, device management, ad distribution, and revenue settlement.",
-			tags: ["AdTech", "Platform Management", "Revenue System"],
-			status: "Stable",
-			gradient: "from-pink-500/20 to-rose-500/20"
-		},
-		{
-			title: "Infinite Tech PMS (Core Edition)",
-			category: "Core Venture",
-			description: "A full-platform IoT multi-level distribution system solution. Adopting the B2B2C2C business model, it connects upstream government and enterprise needs and empowers channels, agents, and merchants for private domain distribution through resource integration.",
-			tags: ["IoT", "Distribution", "B2B2C2C"],
-			status: "Stable",
-			gradient: "from-orange-500/20 to-red-500/20"
-		},
-		{
 			title: "Home Office Camera",
-			category: "Personal Hub",
-			description: "A SOHO monitoring and recording project, using web cameras connected to Windows Server 2019 for real-time recording and automated NAS backup (Windows Native + Debian Web).",
-			tags: ["SOHO", "Surveillance", "Hybrid OS"],
+			category: "Personal Project",
+			description: "SOHO 极简网络视频监控与自动化归档系统，基于 Windows Server 驱动与 NAS 本地存储，实现低功耗 7x24 小时连续录像与事件抓拍。 / SOHO monitoring and recording setup, connecting web cameras to local server for automated 7x24 recording and secure NAS backups.",
+			tags: ["Personal Project", "SOHO", "Surveillance", "NAS Backup"],
 			status: "Active",
 			gradient: "from-blue-500/20 to-indigo-500/20"
+		},
+		{
+			title: "钧曦智能 (Junxi Intelligent)",
+			category: "Legacy Venture",
+			description: "前沿人工智能技术原型探索、实验性数字化资产与高频创新实验室（已归档）。 / Frontier AI exploration, experimental digital assets, and high-frequency innovation lab under the corporate matrix (Archived Legacy).",
+			link: "https://junxi.xyz",
+			tags: ["Legacy", "Innovation Lab", "Frontier Tech"],
+			status: "Legacy",
+			gradient: "from-purple-600/20 to-pink-500/20"
+		},
+		{
+			title: "OhBona",
+			category: "Legacy Venture",
+			description: "Dedicated to breaking traditional dialog interactions. Through the closed loop of 'Perception -> Path Planning -> Minimalist Confirmation', it evolved AI from a 'chatbot' into a sticky 'Digital Assistant' (Archived).",
+			tags: ["Legacy", "AI Agent", "Task Execution", "UX Design"],
+			status: "Legacy",
+			image: "/projects_hero_abstract.png",
+			gradient: "from-purple-500/20 to-blue-500/20"
+		},
+		{
+			title: "YouTube Transcript Automation Factory",
+			category: "Legacy Project",
+			description: "An automated pipeline for fetching YouTube transcripts, syncing with Google Sheets, and processing audio with Faster-Whisper for high-accuracy local transcription and archival (Archived).",
+			link: "https://github.com/wt-wx/youtube-transcript-tool",
+			tags: ["Legacy", "Python", "Automation", "Whisper AI"],
+			status: "Legacy",
+			gradient: "from-red-600/20 to-orange-500/20"
 		},
 		{
 			title: "NGFS",
@@ -265,13 +266,25 @@ const projects = page.data;
 									</span>
 								</div>
 								
-								{project.status === 'Active' && (
+								{(project.status === 'Active' || project.status === 'Live') && (
 									<div class="flex items-center gap-2">
 										<span class="relative flex h-1.5 w-1.5">
-											<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
-											<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand"></span>
+											<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+											<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
 										</span>
-										<span class="text-[9px] font-black uppercase tracking-widest text-brand/60 italic">Live</span>
+										<span class="text-[9px] font-black uppercase tracking-widest text-emerald-500/80 italic">{project.status}</span>
+									</div>
+								)}
+								{project.status === 'Divested' && (
+									<div class="flex items-center gap-2">
+										<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
+										<span class="text-[9px] font-black uppercase tracking-widest text-amber-500/80 italic">Divested</span>
+									</div>
+								)}
+								{project.status === 'Legacy' && (
+									<div class="flex items-center gap-2">
+										<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-muted-foreground/60"></span>
+										<span class="text-[9px] font-black uppercase tracking-widest text-muted-foreground/60 italic">Legacy</span>
 									</div>
 								)}
 							</div>
