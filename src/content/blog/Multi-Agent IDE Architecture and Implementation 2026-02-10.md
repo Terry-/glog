@@ -3,7 +3,7 @@ title: "多智能体协同IDE开发环境：技术架构与实施方案"
 description: "探讨从“单一通用模型”向“专业化多智能体协作”架构演进，构建基于分层代理、插件隔离与 MCP 协议的数字研发团队核心基石。"
 pubDate: "2026-02-10"
 tags: ["AI Agent", "Multi-Agent", "IDE", "MCP", "Gemini 3 Pro", "Claude 4.5", "技术架构"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在软件工程的 AI 范式中，我们正经历从“单一通用模型（Monolithic LLM）”向“专业化多智能体协作（Specialized Agent Swarms）”的架构演进。传统的单模型集成受限于上下文窗口、逻辑倾向及响应延迟，已难以支撑复杂的工程化需求。

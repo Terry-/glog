@@ -3,7 +3,7 @@ title: "深度复盘：互联网大厂神级收购案——买下的不仅是公
 description: "复盘 Android、NeXT、Instagram 等经典收购案，解析巨头如何通过并购实现跨代进化，以及“中立军火商”法则。"
 pubDate: "2026-02-17"
 tags: ["并购", "商业案例", "Google", "Apple", "Microsoft"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 series: "数字权力与策略"
 heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
 ---

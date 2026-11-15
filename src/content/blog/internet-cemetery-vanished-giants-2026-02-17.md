@@ -3,7 +3,7 @@ title: "互联网公墓：那些消失的巨人与被“诅署”的入场券"
 description: "解析 Netscape、AOL、Yahoo 等巨头的陨落，探讨时代拐点下的生存法则与“大厂粉碎机”的商业逻辑。"
 pubDate: "2026-02-17"
 tags: ["互联网历史", "商业失败", "并购", "技术演进"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 series: "数字权力与策略"
 heroImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000"
 ---

@@ -4,7 +4,7 @@ description: '通过 Cloudflare GraphQL Analytics API 构建数据证据链，�
 pubDate: '2026-11-15 12:00:00'
 series: '嵌入式与边缘网络实战'
 tags: ['Cloudflare', 'Cloudflare Workers', 'Edge Computing', 'WAF', 'CC攻击防护', '多云架构', '运维排障']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在多云架构与边缘计算（Edge Computing）日常运维中，监控看板的异常毛刺往往是系统健康度或外部安全风险的直接映射。近期在巡检 Cloudflare 运维看板时，发现过去 24 小时内 Workers 调用量出现指数级异常激增，从接近平稳基线骤增至 **21.61 万次**（环比增长 13,226%），同时全站缓存命中率被拉低至 **0.05%**。

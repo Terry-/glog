@@ -4,7 +4,7 @@ description: '从“囤积拼图”走向“Agent 控制平面”，复盘多智
 pubDate: '2026-08-18 04:00:00'
 series: '科技演进与算力权力格局'
 tags: ['Multi-Agent', 'AgenticOS', '系统架构', '技能蒸馏', 'GitWorktree', '大模型工程']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 当前的 AI Agent 领域正处于一种“疯狂囤积拼图”的狂热期。从 LangGraph 到 AutoGen，开发者们沉迷于尝试各种编排框架，试图复现那种“CEO 智能体下令，员工智能体干活”的直觉模式。

@@ -3,7 +3,7 @@ title: "SUN Microsystems：那个为云端文明盗火的普罗米修斯"
 description: "SUN 是硅谷最后的技术理想国，是工程师文化的乌托邦。它死于商业的残酷，但它的灵魂构成了今天互联网的空气和水。"
 pubDate: "2026-02-09"
 tags: ["SUN Microsystems", "升阳", "Java", "Solaris", "ZFS", "技术理想主义"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 这是一份基于我们之前的对话和数据源，为你定制的关于 **SUN Microsystems（升阳公司）** 的纪念博文。

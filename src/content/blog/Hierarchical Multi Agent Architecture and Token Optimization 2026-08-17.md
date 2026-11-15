@@ -4,7 +4,7 @@ description: '对比 ZeroClaw、Nous Hermes 与 OpenClaw 的运行时特性，�
 pubDate: '2026-08-18 02:00:00'
 series: '科技演进与算力权力格局'
 tags: ['Multi-Agent', 'Agent架构', 'ZeroClaw', 'NousHermes', 'Token优化', '大模型工程']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在 LLM 应用步入深水区后，单一智能体（Single Agent）在面对长上下文、多任务调度及复杂项目工程时，极易因 Context Exploding（上下文爆栈）与 Prompt 污染而走向崩溃。

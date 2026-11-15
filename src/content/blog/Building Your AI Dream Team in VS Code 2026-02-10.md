@@ -3,7 +3,7 @@ title: "告别单打独斗：在 VS Code 中组建你的 AI 梦之队"
 description: "Multi-Agent 协作指南：如何利用 Antigravity 与 Continue.dev，实现从“单一 AI 助手”向“全功能 AI 研发部”的效能跃迁。"
 pubDate: "2026-02-10"
 tags: ["VS Code", "AI Agent", "Multi-Agent", "Antigravity", "Continue.dev", "开发效能"]
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在 AI 辅助开发的早期，我们习惯于在编辑器侧边栏与单一模型进行线性的、碎片化的对话。然而，进入 2026 年，随着项目复杂度的爆炸式增长，单个 AI 在处理跨文件重构、深层逻辑审计或宏观架构设计时，往往会陷入“顾此失彼”的窘境。

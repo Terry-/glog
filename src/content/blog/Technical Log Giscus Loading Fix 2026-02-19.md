@@ -3,7 +3,7 @@ title: '技术日志：Giscus 评论加载失效的底层修复'
 description: '解决 Astro View Transitions 开启后，Giscus 评论区在页面跳转时无法重新加载的“幽灵”问题。'
 pubDate: '2026-02-19'
 tags: ['Giscus', 'Astro', 'View Transitions', '前端修复', '加载优化']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 ### 一、 问题背景

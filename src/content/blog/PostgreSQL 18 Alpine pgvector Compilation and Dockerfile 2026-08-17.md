@@ -4,7 +4,7 @@ description: '针对基于 postgres:18.3-alpine 镜像搭建向量数据库时�
 pubDate: '2026-08-18 00:45:00'
 series: '嵌入式与边缘网络实战'
 tags: ['PostgreSQL', 'pgvector', 'Docker', 'Alpine', '向量数据库', 'AI基础设施']
-author: "尹霈泽"
+author: "尹鸿文（霈泽）"
 ---
 
 在构建基于 LLM 的 RAG（检索增强生成）与 AI 知识库系统时，PostgreSQL 配合 **pgvector** 插件已成为业界主流的向量存储选型。
