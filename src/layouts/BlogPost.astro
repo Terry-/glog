@@ -90,7 +90,7 @@ const id = post ? post.id : 'page';
 							<div class="flex flex-wrap gap-2">
 								{tags.map((tag) => (
 									<a 
-									  href={`/tags/${tag}`} 
+									  href={`/tags/${encodeURIComponent(tag)}`} 
 									  class="text-xs font-medium px-3 py-1.5 bg-muted/60 hover:bg-accent hover:text-foreground rounded-lg text-muted-foreground transition-all border border-border/50"
 									>
 									  #{tag}

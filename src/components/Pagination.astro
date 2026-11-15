@@ -10,18 +10,20 @@ const { page } = Astro.props;
                 class="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-brand transition-colors"
             >
                 <span class="group-hover:-translate-x-1 transition-transform">←</span>
-                Newer Posts
+                <span class="lang-zh">上一页</span>
+                <span class="lang-en">Newer</span>
             </a>
         ) : (
             <span class="text-sm font-bold uppercase tracking-widest text-muted-foreground/30 cursor-not-allowed">
-                ← Newer Posts
+                ← <span class="lang-zh">上一页</span><span class="lang-en">Newer</span>
             </span>
         )}
     </div>
 
     <div class="hidden md:flex items-center gap-4">
         <span class="text-xs font-mono text-muted-foreground/60 uppercase tracking-widest">
-            Page {page.currentPage} of {page.lastPage}
+            <span class="lang-zh">第 {page.currentPage} 页 / 共 {page.lastPage} 页</span>
+            <span class="lang-en">Page {page.currentPage} of {page.lastPage}</span>
         </span>
     </div>
 
@@ -31,12 +33,13 @@ const { page } = Astro.props;
                 href={page.url.next} 
                 class="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-brand transition-colors"
             >
-                Older Posts
+                <span class="lang-zh">下一页</span>
+                <span class="lang-en">Older</span>
                 <span class="group-hover:translate-x-1 transition-transform">→</span>
             </a>
         ) : (
             <span class="text-sm font-bold uppercase tracking-widest text-muted-foreground/30 cursor-not-allowed">
-                Older Posts →
+                <span class="lang-zh">下一页</span><span class="lang-en">Older</span> →
             </span>
         )}
     </div>

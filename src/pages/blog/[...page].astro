@@ -48,7 +48,7 @@ const popularTags = Object.entries(tagCountMap)
 					</p>
 					<div class="flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
 						{popularTags.map(tag => (
-							<a href={`/tags/${tag.toLowerCase()}`} class="text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border border-muted hover:border-brand hover:text-brand transition-all">
+							<a href={`/tags/${encodeURIComponent(tag)}`} class="text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border border-muted hover:border-brand hover:text-brand transition-all">
 								#{tag}
 							</a>
 						))}
@@ -115,7 +115,7 @@ const popularTags = Object.entries(tagCountMap)
 									<div class="flex flex-wrap gap-2 pt-1 relative z-10">
 										{post.data.tags.map((tag) => (
 											<a 
-												href={`/tags/${tag.toLowerCase()}`}
+												href={`/tags/${encodeURIComponent(tag)}`}
 												class="text-[10px] font-mono font-medium px-2.5 py-0.5 rounded bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/40 transition-colors duration-300 ease-out"
 											>
 												#{tag}
