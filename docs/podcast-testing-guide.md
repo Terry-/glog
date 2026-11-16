@@ -10,7 +10,7 @@
 
 ```env
 WONDERCRAFT_API_KEY=your_actual_api_key
-SITE_URL=https://glog.geniux.net
+SITE_URL=https://geniux.net
 ```
 
 ### 2. 检查项目结构
@@ -163,7 +163,7 @@ afplay public/podcasts/podcast-<id>-<timestamp>.mp3
 
 或在浏览器中访问：
 ```
-https://glog.geniux.net/podcasts/podcast-<id>-<timestamp>.mp3
+https://geniux.net/podcasts/podcast-<id>-<timestamp>.mp3
 ```
 
 ### 测试 7: 博客页面状态显示

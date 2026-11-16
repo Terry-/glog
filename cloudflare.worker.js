@@ -227,10 +227,14 @@ export default {
 
         const url = new URL(request.url);
 
-        // 分流逻辑
-        // geniux.net 代理到博客首页 (Intro)
-        // glog.geniux.net 正常的博客访问
-        if (url.hostname === "geniux.net" || url.hostname === "glog.geniux.net") {
+        // 如果访问旧域名 glog.geniux.net，301 永久重定向到唯一权威根域名 geniux.net
+        if (url.hostname === "glog.geniux.net") {
+            const redirectUrl = `https://geniux.net${url.pathname}${url.search}`;
+            return Response.redirect(redirectUrl, 301);
+        }
+
+        // 唯一权威域名 geniux.net 及 www 访问
+        if (url.hostname === "geniux.net" || url.hostname === "www.geniux.net") {
             try {
                 return await handleRequest(request);
             } catch (e) {

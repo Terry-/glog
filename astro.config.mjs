@@ -10,7 +10,7 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://glog.geniux.net',
+  site: 'https://geniux.net',
   output: 'server',
   integrations: [mdx(), sitemap()],
   markdown: {

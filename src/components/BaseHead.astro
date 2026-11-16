@@ -18,7 +18,7 @@ interface Props {
 	};
 }
 
-const siteURL = Astro.site ?? new URL('https://glog.geniux.net');
+const siteURL = Astro.site ?? new URL('https://geniux.net');
 const canonicalURL = new URL(Astro.url.pathname, siteURL);
 
 const { title, description, image = FallbackImage, article } = Astro.props;

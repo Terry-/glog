@@ -192,7 +192,7 @@ export class RSSFeedGenerator {
 
 export async function generateRSSFeed(episodes, outputPath, options = {}) {
   const generator = new RSSFeedGenerator(
-    options.siteUrl || 'https://glog.geniux.net',
+    options.siteUrl || 'https://geniux.net',
     options.siteTitle || 'Geniux Tech Blog Podcast',
     options.siteDescription || 'Technology insights and tutorials from Geniux'
   );
@@ -212,7 +212,7 @@ export async function generateRSSFeed(episodes, outputPath, options = {}) {
     success: true,
     outputPath,
     episodeCount: episodes.length,
-    feedUrl: `${options.siteUrl || 'https://glog.geniux.net'}/rss.xml`,
+    feedUrl: `${options.siteUrl || 'https://geniux.net'}/rss.xml`,
     feedSize: Buffer.byteLength(full)
   };
 }

@@ -195,7 +195,7 @@ export async function convertBlogToPodcast(blogPost, options = {}) {
       podcastId,
       postId,
       audioPath: audioResult.audioPath,
-      audioUrl: `${process.env.SITE_URL || 'https://glog.geniux.net'}${audioResult.audioPath}`,
+      audioUrl: `${process.env.SITE_URL || 'https://geniux.net'}${audioResult.audioPath}`,
       duration: processedContent.duration,
       metadata: {
         title: processedContent.title,
