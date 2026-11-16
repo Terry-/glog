@@ -124,7 +124,7 @@ Glog 集成了基于 GitHub Discussions 的 Giscus 评论系统。
 Glog 采用多云容灾与全球加速架构，确保在任何网络环境下都能快速访问：
 
 ### 1. 负载均衡 (Load Balancer)
-使用 **Cloudflare Worker** 作为全球流量入口 (`glog.geniux.net`)，实现智能路由与负载均衡：
+使用 **Cloudflare Worker** 作为全球流量入口 (`geniux.net`)，实现智能路由与负载均衡：
 - **分发策略**：基于地理位置 (Geo-Routing) 与权重 (Weighted Selecting) 自动分发。
 - **目标终端**：
     - 🇨🇳 **Vercel**: `glog.vercel.geniux.net` (中国大陆及美洲主节点)

@@ -50,7 +50,7 @@ SOCIAL_MEDIA_SYNC_ENABLED=false
 QUALITY_CHECK_ENABLED=true
 
 # Website URL
-SITE_URL=https://glog.geniux.net
+SITE_URL=https://geniux.net
 ```
 
 ### 2. 获取 Wondercraft API Key

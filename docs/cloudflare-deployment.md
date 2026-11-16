@@ -1,25 +1,23 @@
 # Cloudflare Deployment Strategy
 
-This guide details the single-worker architecture for managing `geniux.net` (Intro Page) and `glog.geniux.net` (Main Blog).
+This guide details the single-worker architecture for managing `geniux.net` as the unified apex domain.
 
 ## 1. Architecture Overview
-We use a single Cloudflare Worker to handle traffic for both the root domain and the blog subdomain. This simplifies maintenance and SSL management.
+We use a single Cloudflare Worker to handle traffic for the unified apex domain `geniux.net`. Any legacy traffic from `glog.geniux.net` is automatically 301 redirected to `geniux.net`.
 
-- **Root Domain (`geniux.net`)**: Proxies to the high-end Intro Page.
-- **Subdomain (`glog.geniux.net`)**: Acts as a smart load balancer across multiple hosting providers (Vercel, Netlify, QCloud).
+- **Root Domain (`geniux.net`)**: Acts as a smart load balancer across multiple hosting providers (Vercel, Netlify, QCloud).
+- **Legacy Subdomain (`glog.geniux.net`)**: Permanent 301 redirect to `geniux.net`.
 
 ## 2. Worker Configuration
-The file `cloudflare.worker.js` contains the logic for both.
+The file `cloudflare.worker.js` contains the logic.
 
 ### Domain Routing Logic:
 ```javascript
-if (url.hostname === "geniux.net") {
-    // Fetches the /intro path from the Vercel deployment
-    return introWorker.fetch(request);
-}
 if (url.hostname === "glog.geniux.net") {
-    // Intelligent load balancing & caching
-    return balancerWorker.fetch(request);
+    return Response.redirect(`https://geniux.net${url.pathname}${url.search}`, 301);
+}
+if (url.hostname === "geniux.net" || url.hostname === "www.geniux.net") {
+    return await handleRequest(request);
 }
 ```
 
