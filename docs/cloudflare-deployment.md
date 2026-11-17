@@ -14,7 +14,11 @@ The file `cloudflare.worker.js` contains the logic.
 ### Domain Routing Logic:
 ```javascript
 if (url.hostname === "glog.geniux.net") {
-    return Response.redirect(`https://geniux.net${url.pathname}${url.search}`, 301);
+    let targetPath = url.pathname;
+    if (targetPath === "/" || targetPath === "") {
+        targetPath = "/blog";
+    }
+    return Response.redirect(`https://geniux.net${targetPath}${url.search}`, 301);
 }
 if (url.hostname === "geniux.net" || url.hostname === "www.geniux.net") {
     return await handleRequest(request);
