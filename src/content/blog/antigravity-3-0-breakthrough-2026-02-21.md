@@ -5,6 +5,7 @@ pubDate: '2026-02-21 21:25:00'
 series: '软件开发工作流中LLM的协同'
 draft: true
 tags: ['Antigravity', 'AI Agent', 'Architecture']
+author: "尹鸿文（霈泽）"
 ---
 
 # 告别“人工路由器”：Antigravity 3.0 异构多智能体协同框架的演进与破局

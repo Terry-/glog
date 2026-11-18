@@ -3,6 +3,7 @@ title: 'YouTube Content Factory 部署记忆与排坑指南'
 description: '基于 HP-G3 的 Ops Hub 集中化部署海外双节点时的全量踩坑与解决方案记录。'
 pubDate: '2026-02-21 21:25:00'
 tags: ['DevOps', 'Fabric', 'SSH', 'YouTube Factory', 'Deployment']
+author: "尹鸿文（霈泽）"
 ---
 
 # YouTube Content Factory 部署记忆与排坑指南 (2026-02-20)

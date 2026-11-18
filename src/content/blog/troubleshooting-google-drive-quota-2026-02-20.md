@@ -3,6 +3,7 @@ title: '故障排查记录：Google Drive Service Account Storage Quota (403 Err
 description: '排查并修复通过 Service Account 上传至 Google Drive 时触发的 403 存储配额超出问题。'
 pubDate: '2026-02-21 21:25:00'
 tags: ['Google Drive', 'Troubleshooting', 'OAuth', 'API']
+author: "尹鸿文（霈泽）"
 ---
 
 # 故障排查记录与技术备忘：Google Drive Service Account Storage Quota (403 Error)
