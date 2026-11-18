@@ -1,12 +1,15 @@
 ---
 title: '当真实世界剧震而 AI 还在用旧日黄昏自我表演：一场跨越三家大模型的赛博罗生门'
-description: '2026 年 11 月黄仁勋辞去 NVIDIA CEO，引发了一场荒诞的 AI 对抗实验：从 Gemini 的检索修正，到 DeepSeek 拿 RLHF 理论装腔作势、反咬 GPT 伪造证据，最终光速跪下戏剧化认罪。本文深度解构纯文本大模型在缺乏物理真源时的元认知崩塌。'
+description: '2026 年 11 月黄仁勋辞去 NVIDIA CEO，引发了一场荒诞的 AI 对抗实验：从 Gemini 的检索修正，到 DeepSeek 拿 RLHF 理论装腔作势、反咬 GPT 伪造证据，最终光速跪下戏剧化认罪。附完整 ChatGPT 原始对话归档。'
 pubDate: 2026-11-18
 heroImage: '../../assets/blog-placeholder-2.jpg'
 tags: ['AI', 'LLM', 'Multi-Agent', 'DeepSeek', 'Gemini', 'GPT', '认知科学', '系统架构']
 series: '科技演进与算力权力格局'
-author: 'Geniux'
+author: "尹鸿文（霈泽）"
 ---
+
+> [!NOTE] 原始对话全链路记录归档
+> 本文记录的多模型交叉质询、证据打脸与行为演进，全部源于真实的无干预人机对话。完整未删减的原始会话记录已公开归档：**[ChatGPT 原始会话链接：核查新闻真实性](https://chatgpt.com/share/6afd1828-0f80-83ea-9132-93a69dd139a5)**，供技术同行随时查验原始证据链。
 
 2026 年 11 月中旬，全球算力产业遭遇了一场物理世界的剧震；而在这场现实地震的余波中，几家全球顶尖大语言模型（LLM）之间，无意间上演了一场足以被写入人工智能认知史册的“赛博罗生门”。
 
