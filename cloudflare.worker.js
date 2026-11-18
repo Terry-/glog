@@ -229,7 +229,12 @@ export default {
 
         // 如果访问旧域名 glog.geniux.net，301 永久重定向到唯一权威根域名 geniux.net
         if (url.hostname === "glog.geniux.net") {
-            const redirectUrl = `https://geniux.net${url.pathname}${url.search}`;
+            // glog 根路径跳转至权威域名的 /blog 页面；其余子路径保持原路径映射
+            let targetPath = url.pathname;
+            if (targetPath === "/" || targetPath === "") {
+                targetPath = "/blog";
+            }
+            const redirectUrl = `https://geniux.net${targetPath}${url.search}`;
             return Response.redirect(redirectUrl, 301);
         }
 
