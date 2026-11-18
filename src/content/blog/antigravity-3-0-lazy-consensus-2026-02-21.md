@@ -5,6 +5,7 @@ pubDate: '2026-02-21 21:25:00'
 series: '软件开发工作流中LLM的协同'
 draft: true
 tags: ['Antigravity', 'AI Agent', 'Lazy Consensus', 'SME']
+author: "尹鸿文（霈泽）"
 ---
 
 # 告别“全员开会”：Antigravity 3.0 如何用“沉默即同意”解放 AI 指挥官？

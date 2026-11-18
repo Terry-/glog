@@ -5,6 +5,7 @@ pubDate: '2026-02-21 21:25:00'
 series: '软件开发工作流中LLM的协同'
 draft: true
 tags: ['Antigravity', 'AI Agent', 'Architecture', 'Whitepaper']
+author: "尹鸿文（霈泽）"
 ---
 
 # Antigravity 3.0：异构多智能体协同框架技术架构白皮书
