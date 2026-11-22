@@ -240,6 +240,10 @@ export default {
 
         // 唯一权威域名 geniux.net 及 www 访问
         if (url.hostname === "geniux.net" || url.hostname === "www.geniux.net") {
+            // Sitemap 别名 301 重定向兜底
+            if (url.pathname === "/sitemap.xml") {
+                return Response.redirect(`https://geniux.net/sitemap-index.xml`, 301);
+            }
             try {
                 return await handleRequest(request);
             } catch (e) {

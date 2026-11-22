@@ -12,6 +12,9 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://geniux.net',
   output: 'server',
+  redirects: {
+    '/sitemap.xml': '/sitemap-index.xml',
+  },
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {
