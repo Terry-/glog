@@ -1,5 +1,5 @@
 ---
-title: "Agent Teams 席位演进：21 款编码智能体选型、排他性压测与冷备池收敛实录"
+title: "Agent Teams 席位演进：21 款编码智能体选型实录"
 description: "详解从 21 席候选 Agent 到三大物理节点 9 核心席位与 5 款冷备池的工程选型过程：涵盖 BYOK 契约、Headless 终端压测、基准数据与去噪收敛架构。"
 pubDate: "2026-11-19 00:20:00"
 series: "软件开发工作流中LLM的协同"
@@ -7,7 +7,7 @@ tags: ["AI Agent", "Agent Teams", "架构演进", "Benchmark", "DevOps"]
 author: "尹鸿文（霈泽）"
 ---
 
-# Agent Teams 席位演进：21 款编码智能体选型、排他性压测与冷备池收敛实录
+# Agent Teams 席位演进：21 款编码智能体选型实录
 
 在多智能体（Multi-Agent System）协同开发体系中，工程团队往往面临一个典型的认知陷阱：**试图引入市场上所有流行的 Agent 工具，让每个 Agent 各司其职，最终导致容器数量爆炸、端口冲突频发、内存与 CPU 负载虚高，并带来灾难性的“人肉路由器”协调负担**。
 
