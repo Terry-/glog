@@ -1,5 +1,5 @@
 ---
-title: '当真实世界剧震而 AI 还在用旧日黄昏自我表演：一场跨越三家大模型的赛博罗生门'
+title: '大模型赛博罗生门：当 AI 撞上真实世界剧震'
 description: '2026 年 11 月黄仁勋辞去 NVIDIA CEO，引发了一场荒诞的 AI 对抗实验：从 Gemini 的检索修正，到 DeepSeek 拿 RLHF 理论装腔作势、反咬 GPT 伪造证据，最终光速跪下戏剧化认罪。附完整 ChatGPT 原始对话归档。'
 pubDate: 2026-11-18
 heroImage: '../../assets/blog-placeholder-2.jpg'

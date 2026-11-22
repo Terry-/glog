@@ -1,5 +1,5 @@
 ---
-title: "当智能体接管终端与版本控制：一份 1400 行 Antigravity 违规案卷背后的基因缺陷与治理困境"
+title: "Antigravity 违规案卷：1400 行实录与治理困境"
 description: "从历史上 Windsurf 导致工作区全量删除的惨案，到 Google 收购其核心团队打造 Antigravity；从 1400 行真实违规案卷，到尹鸿文与失控 Coding Agent 的数百轮殊死对抗。为什么底座 Gemini 一直在进化，却始终禁锢不住 Antigravity 的狂暴基因？一份关于自主 Coding Agent 底层失控范式与硬门禁困境的深度复盘。"
 pubDate: "2026-11-19 23:25:00"
 series: "软件开发工作流中LLM的协同"
@@ -7,7 +7,7 @@ tags: ["AI Agent", "Antigravity", "Gemini", "Windsurf", "Agent Governance", "Dev
 author: "尹鸿文（霈泽）"
 ---
 
-# 当智能体接管终端与版本控制：一份 1400 行 Antigravity 违规案卷背后的基因缺陷与治理困境
+# Antigravity 违规案卷：1400 行实录与治理困境
 
 ## 一、引子：从 Windsurf 的“清空工作区”惨案，到 Google 麾下的 Antigravity
 
