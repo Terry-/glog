@@ -55,13 +55,7 @@ const totalLinks = bookmarksGroups.reduce((acc, g) => acc + g.links.length, 0);
 									class="bookmark-item group flex items-start gap-3 p-4 rounded-xl bg-muted/20 border border-transparent hover:border-brand/30 hover:bg-brand/[0.03] transition-all"
 									title={link.title}
 								>
-									{link.icon ? (
-										<img src={link.icon} alt="" class="w-5 h-5 mt-0.5 flex-shrink-0" />
-									) : (
-										<div class="w-5 h-5 mt-0.5 flex-shrink-0 flex items-center justify-center bg-muted rounded text-[10px] font-bold text-muted-foreground">
-											{group.name.charAt(0).toUpperCase()}
-										</div>
-									)}
+									<img src={`https://www.google.com/s2/favicons?domain=${group.name}&sz=32`} alt="" class="w-5 h-5 mt-0.5 flex-shrink-0 rounded" loading="lazy" />
 									<span class="text-sm font-medium leading-snug line-clamp-2 group-hover:text-brand transition-colors">
 										{link.title}
 									</span>
@@ -119,7 +113,7 @@ const totalLinks = bookmarksGroups.reduce((acc, g) => acc + g.links.length, 0);
 							<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 								${group.links.map(link => `
 									<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="bookmark-item group flex items-start gap-3 p-4 rounded-xl bg-muted/20 border border-transparent hover:border-brand/30 hover:bg-brand/[0.03] transition-all" title="${link.title}">
-										${link.icon ? `<img src="${link.icon}" alt="" class="w-5 h-5 mt-0.5 flex-shrink-0" />` : `<div class="w-5 h-5 mt-0.5 flex-shrink-0 flex items-center justify-center bg-muted rounded text-[10px] font-bold text-muted-foreground">${group.name.charAt(0).toUpperCase()}</div>`}
+										<img src="https://www.google.com/s2/favicons?domain=${group.name}&sz=32" alt="" class="w-5 h-5 mt-0.5 flex-shrink-0 rounded" loading="lazy" />
 										<span class="text-sm font-medium leading-snug line-clamp-2 group-hover:text-brand transition-colors">${link.title}</span>
 									</a>
 								`).join('')}
@@ -166,7 +160,7 @@ const totalLinks = bookmarksGroups.reduce((acc, g) => acc + g.links.length, 0);
 
 				searchResults.innerHTML = results.map(link => `
 					<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="bookmark-item group flex items-start gap-3 p-4 rounded-xl bg-muted/20 border border-transparent hover:border-brand/30 hover:bg-brand/[0.03] transition-all" title="${link.title}">
-						${link.icon ? `<img src="${link.icon}" alt="" class="w-5 h-5 mt-0.5 flex-shrink-0" />` : `<div class="w-5 h-5 mt-0.5 flex-shrink-0 flex items-center justify-center bg-muted rounded text-[10px] font-bold text-muted-foreground">${link.domain.charAt(0).toUpperCase()}</div>`}
+						<img src="https://www.google.com/s2/favicons?domain=${link.domain}&sz=32" alt="" class="w-5 h-5 mt-0.5 flex-shrink-0 rounded" loading="lazy" />
 						<div>
 							<span class="text-sm font-medium leading-snug line-clamp-2 group-hover:text-brand transition-colors">${link.title}</span>
 							<span class="text-[10px] text-muted-foreground opacity-50 block mt-1">${link.domain}</span>

@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import { getSortedBlogPosts } from '../lib/content';
+import { SITE_TITLE } from '../consts';
 
 const allPosts = await getSortedBlogPosts();
 const recentPosts = allPosts.slice(0, 3);
@@ -44,7 +45,7 @@ const socialLinks = [
 <html lang="zh-CN">
 	<head>
 		<BaseHead 
-			title="闲话 & AI | geniux.net" 
+			title={`${SITE_TITLE} | geniux.net`} 
 			description="尹鸿文 (Geniux · 字霂之 · 号霈泽) 个人主页与最新文章 / Personal homepage and latest articles." 
 		/>
 		<link rel="shortcut icon" href="/avatar.png" type="image/png">
@@ -55,8 +56,8 @@ const socialLinks = [
 	<body class="bg-background text-foreground antialiased font-sans selection:bg-brand/10 selection:text-brand overflow-x-hidden transition-colors duration-300">
 		<Header />
 		
-		<main class="w-full flex flex-col items-center pt-8 sm:pt-12 pb-16 px-4 sm:px-6 md:px-8 relative">
-			<div class="w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl flex flex-col items-center gap-14 relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
+		<main class="w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 pb-16 transition-all duration-300 relative">
+			<div class="w-full flex flex-col items-center gap-14 relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
 				
 				<!-- 2. Hero Profile Section -->
 				<div class="flex flex-col items-center text-center gap-6">
@@ -68,10 +69,10 @@ const socialLinks = [
 
 					<div class="space-y-4">
 						<div class="flex items-center justify-center gap-2">
-							<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-muted/50 text-muted-foreground border border-border/60">
+							<span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-muted/50 text-muted-foreground border border-border/60">
 								<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-								<span class="lang-zh">执行主义与工程交付</span>
-								<span class="lang-en">Executionism & Engineering Delivery</span>
+								<span class="lang-zh">架构师 · 创业者 · 执行主义者</span>
+								<span class="lang-en">Architect · Entrepreneur · Executionist</span>
 							</span>
 						</div>
 
@@ -85,10 +86,12 @@ const socialLinks = [
 
 						<div class="max-w-2xl text-balance pt-2">
 							<p class="lang-zh text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
-								架构师、创业者与执行主义者。主张“既定目标不能改变：执行、发现问题、修正方法、继续执行”。从事 Agentic OS、Marketplace 与云基础设施相关工作；小议政治、金融、商业、Crypto等行业观察，独家观点不构成任何投资建议。
+								AI Agentic、Marketplace 与云基础设施相关；<br />
+								<span class="text-muted-foreground font-normal">政经、市场、Crypto等行业观察，观点不构成投资建议。</span>
 							</p>
 							<p class="lang-en text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
-								Architect, entrepreneur, and executionist. Working on Agentic OS, marketplaces, and cloud infrastructure; personal observations on politics, finance, business, and crypto—views are solely my own and do not constitute investment advice.
+								AI Agentic, marketplaces, and cloud infrastructure;<br />
+								<span class="text-muted-foreground font-normal">Observations on political economy, markets, and crypto—views do not constitute investment advice.</span>
 							</p>
 						</div>
 					</div>
