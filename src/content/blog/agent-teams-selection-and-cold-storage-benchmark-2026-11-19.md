@@ -2,6 +2,7 @@
 title: "Agent Teams 席位演进：21 款编码智能体选型实录"
 description: "详解从 21 席候选 Agent 到三大物理节点 9 核心席位与 5 款冷备池的工程选型过程：涵盖 BYOK 契约、Headless 终端压测、基准数据与去噪收敛架构。"
 pubDate: "2026-11-19 00:20:00"
+heroImage: '../../assets/covers/agent-teams.jpg'
 series: "软件开发工作流中LLM的协同"
 tags: ["AI Agent", "Agent Teams", "架构演进", "Benchmark", "DevOps"]
 author: "尹鸿文（霈泽）"

@@ -2,6 +2,7 @@
 title: '从按人头卖软件到按结果买劳力：2026 年 AI Agent 的单位经济模型与出清生存指南'
 description: '对照 2000 年互联网泡沫与 2026 年 AI 商业化出清，系统拆解 Seat、Usage、Work 到 Outcome 的四层变现逻辑，重构垂直赛道可量化经济事件与健康的造血闭环。'
 pubDate: '2026-09-27 17:30:00'
+heroImage: '../../assets/covers/agent-unit-economics.jpg'
 series: '科技演进与算力权力格局'
 tags: ['AI商业模式', '单位经济', 'Agent经济学', 'SaaS演进', '出清与周期', '商业闭环']
 author: "尹鸿文（霈泽）"

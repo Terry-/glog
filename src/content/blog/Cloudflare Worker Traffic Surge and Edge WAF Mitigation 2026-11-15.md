@@ -2,6 +2,7 @@
 title: '单日 Worker 调用激增 21 万次：一次边缘多云网关的 CC 攻击排查与治理实录'
 description: '通过 Cloudflare GraphQL Analytics API 构建数据证据链，定位海外单一节点高频恶意爬取行为，揭示多云路由逻辑带来的“调用放大效应”，并通过边缘 WAF 实现秒级阻断的工程治理全过程。'
 pubDate: '2026-11-15 12:00:00'
+heroImage: '../../assets/covers/edge-waf.jpg'
 series: '嵌入式与边缘网络实战'
 tags: ['Cloudflare', 'Cloudflare Workers', 'Edge Computing', 'WAF', 'CC攻击防护', '多云架构', '运维排障']
 author: "尹鸿文（霈泽）"
