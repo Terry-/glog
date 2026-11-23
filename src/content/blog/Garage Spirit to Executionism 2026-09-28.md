@@ -2,6 +2,7 @@
 title: '从车库民房到执行主义：中国早期互联网现场与终极交付哲学'
 description: '重溯硅谷车库神话与中国民房草莽创业的真实生存现场，剖析湖畔花园与早期腾讯生死抉择，提炼出直面周期与资本博弈的硬核执行主义（Executionism）。'
 pubDate: '2026-09-28 11:30:00'
+heroImage: '../../assets/covers/garage-executionism.jpg'
 series: '商业洞察与政商博弈'
 tags: ['车库精神', '早期互联网', '执行主义', '阿里巴巴', '腾讯', '资本博弈', '商业哲学']
 author: "尹鸿文（霈泽）"

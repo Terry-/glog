@@ -76,7 +76,7 @@ const popularTags = Object.entries(tagCountMap)
 					{
 						posts.map((post) => (
 							<article class="group relative flex flex-col md:flex-row gap-5 md:gap-7 items-start p-5 sm:p-6 rounded-2xl border border-border/60 hover:border-foreground/25 bg-card/20 hover:bg-card/60 transition-all duration-300 ease-out">
-								{post.data.heroImage && (
+								{post.data.heroImage ? (
 									<div class="w-full md:w-52 aspect-video rounded-xl overflow-hidden bg-muted flex-shrink-0 border border-border/40">
 										<a href={`/blog/${post.id}/`} class="relative z-10 block w-full h-full">
 											<Image 
@@ -86,6 +86,17 @@ const popularTags = Object.entries(tagCountMap)
 												height={225} 
 												class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 ease-out"
 											/>
+										</a>
+									</div>
+								) : (
+									<div class="w-full md:w-52 aspect-video rounded-xl overflow-hidden bg-muted/30 flex-shrink-0 border border-border/40 relative group-hover:border-foreground/20 transition-all duration-300 flex items-center justify-center">
+										<a href={`/blog/${post.id}/`} class="relative z-10 flex flex-col items-center justify-center w-full h-full p-4 text-center select-none bg-gradient-to-br from-foreground/[0.02] via-transparent to-foreground/[0.04]">
+											<div class="w-8 h-8 rounded-lg bg-foreground/[0.05] border border-border/60 flex items-center justify-center text-xs font-mono font-bold text-foreground/70 mb-2 shadow-2xs">
+												{(post.data.tags && post.data.tags[0]) ? post.data.tags[0].slice(0, 2).toUpperCase() : 'AI'}
+											</div>
+											<span class="text-[11px] font-mono text-muted-foreground/70 uppercase tracking-widest line-clamp-1">
+												{post.data.series || (post.data.tags && post.data.tags[0]) || 'Glog Insight'}
+											</span>
 										</a>
 									</div>
 								)}
