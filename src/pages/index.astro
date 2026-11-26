@@ -138,13 +138,13 @@ const socialLinks = [
 								<p class="text-xs sm:text-sm text-muted-foreground line-clamp-2 leading-relaxed">
 									{post.data.description}
 								</p>
-								<div class="flex flex-wrap gap-1.5 mt-3">
-									{post.data.tags.slice(0, 2).map((tag) => (
+								{(post.data.series || (post.data.tags && post.data.tags[0])) && (
+									<div class="flex flex-wrap gap-1.5 mt-3">
 										<span class="px-2 py-0.5 text-[10px] font-mono bg-muted/40 rounded text-muted-foreground border border-border/30">
-											#{tag}
+											{post.data.series ? post.data.series : `#${post.data.tags[0]}`}
 										</span>
-									))}
-								</div>
+									</div>
+								)}
 							</a>
 						))}
 					</div>
