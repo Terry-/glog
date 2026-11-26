@@ -139,7 +139,7 @@ const socialLinks = [
 									{post.data.description}
 								</p>
 								{(post.data.series || (post.data.tags && post.data.tags[0])) && (
-									<div class="flex flex-wrap gap-1.5 mt-3">
+									<div class="flex flex-wrap justify-end gap-1.5 mt-3">
 										<span class="px-2 py-0.5 text-[10px] font-mono bg-muted/40 rounded text-muted-foreground border border-border/30">
 											{post.data.series ? post.data.series : `#${post.data.tags[0]}`}
 										</span>
