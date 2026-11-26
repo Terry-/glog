@@ -76,13 +76,26 @@ const socialLinks = [
 							</span>
 						</div>
 
-						<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight flex items-center justify-center gap-x-3">
-							<span class="lang-zh text-primary">尹鸿文</span>
+						<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight flex items-center justify-center gap-x-3">
+							<span id="hero-zh-name" class="lang-zh text-primary">尹鸿文</span>
 							<span class="text-primary">Geniux</span>
 						</h1>
-						<p class="text-xs sm:text-sm text-muted-foreground font-mono tracking-widest mt-1">
-							<span class="lang-zh">字 霂之 · 号 霈泽</span>
-						</p>
+						<script is:inline>
+							(function() {
+								var names = ['尹鸿文', '尹霄枻', '尹霈泽', '尹霂之', '尹博瑞'];
+								var el = document.getElementById('hero-zh-name');
+								if (!el) return;
+								try {
+									var last = sessionStorage.getItem('geniux_hero_zh_name');
+									var pool = names.filter(function(n) { return n !== last; });
+									var picked = pool[Math.floor(Math.random() * pool.length)];
+									el.textContent = picked;
+									sessionStorage.setItem('geniux_hero_zh_name', picked);
+								} catch (e) {
+									el.textContent = names[Math.floor(Math.random() * names.length)];
+								}
+							})();
+						</script>
 
 						<div class="max-w-2xl text-balance pt-2">
 							<p class="lang-zh text-sm sm:text-base text-foreground/90 font-medium leading-relaxed">
@@ -141,13 +154,13 @@ const socialLinks = [
 								<p class="text-xs sm:text-sm text-muted-foreground line-clamp-2 leading-relaxed">
 									{post.data.description}
 								</p>
-								<div class="flex flex-wrap gap-1.5 mt-3">
-									{post.data.tags.slice(0, 4).map((tag) => (
+								{(post.data.series || (post.data.tags && post.data.tags[0])) && (
+									<div class="flex flex-wrap justify-end gap-1.5 mt-3">
 										<span class="px-2 py-0.5 text-[10px] font-mono bg-muted/40 rounded text-muted-foreground border border-border/30">
-											#{tag}
+											{post.data.series ? post.data.series : `#${post.data.tags[0]}`}
 										</span>
-									))}
-								</div>
+									</div>
+								)}
 							</a>
 						))}
 					</div>
